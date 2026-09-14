@@ -11,9 +11,17 @@
 # Run from the repo root, in a regular terminal (it needs network):
 #   sh tools/fetch-districts.sh
 #
-# These are the authoritative source for congressional, state senate and state
-# house boundaries statewide. Downloading them once means no county has to
-# publish its own copy, and the ones that do can be ignored.
+# SENATE AND HOUSE ONLY. This service carries sitting-member names, so its
+# polygons are the boundaries each member was ELECTED under. Senate and house
+# were not redrawn in 2025, so those two layers are current and correct.
+#
+# Its layer 2 (congressional) is the 2021 map and is WRONG for the 2026 ballot -
+# Texas redrew congressionally mid-decade (PLANC2333) and the Supreme Court
+# allowed the new map for the 2026 midterms. Validating layer 2 against Tarrant
+# scored 57% while senate and house scored 99.5%. That is why it is not fetched
+# here. Get congressional with:
+#
+#     python3 tools/fetch-congressional-map.py
 
 set -e
 BASE="https://feature.geographic.texas.gov/arcgis/rest/services/Legislative_Bnd/Legislative_Bnd/MapServer"
@@ -40,7 +48,9 @@ fetch() {
 
 fetch 0 tx-senate-districts.geojson
 fetch 1 tx-house-districts.geojson
-fetch 2 tx-congressional-districts.geojson
+# layer 2 deliberately NOT fetched - see the header. Use fetch-congressional-map.py
 
 echo
-echo "Done. Now run:  python3 tools/validate-district-join.py"
+echo "Done (senate + house)."
+echo "Congressional:  python3 tools/fetch-congressional-map.py"
+echo "Then validate:  python3 tools/validate-district-join.py"
