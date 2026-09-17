@@ -11,7 +11,7 @@
   },
   "candidates": [
     {
-      "id": "tc-2026-11-001",
+      "id": "2026-11-03-u-s-senator-ken-paxton",
       "ballotOrder": {
         "Tarrant": 1,
         "Dallas": 1,
@@ -37,7 +37,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-002",
+      "id": "2026-11-03-u-s-senator-james-talarico",
       "ballotOrder": {
         "Tarrant": 2,
         "Dallas": 2,
@@ -63,7 +63,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-003",
+      "id": "2026-11-03-u-s-senator-ted-brown",
       "ballotOrder": {
         "Tarrant": 3,
         "Dallas": 3,
@@ -89,7 +89,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-004",
+      "id": "2026-11-03-u-s-representative-district-6-jake-ellzey",
       "ballotOrder": {
         "Tarrant": 4,
         "Dallas": 6
@@ -116,7 +116,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-005",
+      "id": "2026-11-03-u-s-representative-district-6-danny-minton",
       "ballotOrder": {
         "Tarrant": 5,
         "Dallas": 7
@@ -143,7 +143,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-006",
+      "id": "2026-11-03-u-s-representative-district-12-craig-goldman",
       "ballotOrder": {
         "Tarrant": 6
       },
@@ -168,7 +168,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-007",
+      "id": "2026-11-03-u-s-representative-district-12-angela-heli-rodriguez-prilliman",
       "ballotOrder": {
         "Tarrant": 7
       },
@@ -193,7 +193,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-008",
+      "id": "2026-11-03-u-s-representative-district-24-beth-van-duyne",
       "ballotOrder": {
         "Tarrant": 8,
         "Dallas": 8
@@ -220,7 +220,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-009",
+      "id": "2026-11-03-u-s-representative-district-24-kevin-burge",
       "ballotOrder": {
         "Tarrant": 9,
         "Dallas": 9
@@ -247,7 +247,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-010",
+      "id": "2026-11-03-u-s-representative-district-25-roger-williams",
       "ballotOrder": {
         "Tarrant": 10
       },
@@ -272,7 +272,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-011",
+      "id": "2026-11-03-u-s-representative-district-25-dione-sims",
       "ballotOrder": {
         "Tarrant": 11
       },
@@ -297,7 +297,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-012",
+      "id": "2026-11-03-u-s-representative-district-30-everett-jackson",
       "ballotOrder": {
         "Tarrant": 12,
         "Dallas": 10
@@ -324,7 +324,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-013",
+      "id": "2026-11-03-u-s-representative-district-30-frederick-d-haynes-iii",
       "ballotOrder": {
         "Tarrant": 13,
         "Dallas": 11
@@ -351,7 +351,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-014",
+      "id": "2026-11-03-governor-greg-abbott",
       "ballotOrder": {
         "Tarrant": 14,
         "Dallas": 16,
@@ -377,7 +377,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-015",
+      "id": "2026-11-03-governor-gina-hinojosa",
       "ballotOrder": {
         "Tarrant": 15,
         "Dallas": 17,
@@ -403,7 +403,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-016",
+      "id": "2026-11-03-governor-pat-dixon",
       "ballotOrder": {
         "Tarrant": 16,
         "Dallas": 18,
@@ -429,7 +429,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-017",
+      "id": "2026-11-03-lieutenant-governor-dan-patrick",
       "ballotOrder": {
         "Tarrant": 17,
         "Dallas": 19,
@@ -455,7 +455,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-018",
+      "id": "2026-11-03-lieutenant-governor-vikki-goodwin",
       "ballotOrder": {
         "Tarrant": 18,
         "Dallas": 20,
@@ -481,7 +481,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-019",
+      "id": "2026-11-03-lieutenant-governor-anthony-cristo",
       "ballotOrder": {
         "Tarrant": 19,
         "Dallas": 21,
@@ -507,7 +507,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-020",
+      "id": "2026-11-03-lieutenant-governor-kevin-mccormick",
       "ballotOrder": {
         "Tarrant": 20,
         "Dallas": 22,
@@ -533,7 +533,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-021",
+      "id": "2026-11-03-attorney-general-mayes-middleton",
       "ballotOrder": {
         "Tarrant": 21,
         "Dallas": 23,
@@ -559,7 +559,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-022",
+      "id": "2026-11-03-attorney-general-nathan-johnson",
       "ballotOrder": {
         "Tarrant": 22,
         "Dallas": 24,
@@ -585,7 +585,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-023",
+      "id": "2026-11-03-attorney-general-tom-oxford",
       "ballotOrder": {
         "Tarrant": 23,
         "Dallas": 25,
@@ -611,7 +611,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-024",
+      "id": "2026-11-03-comptroller-of-public-accounts-don-huffines",
       "ballotOrder": {
         "Tarrant": 24,
         "Dallas": 26,
@@ -637,7 +637,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-025",
+      "id": "2026-11-03-comptroller-of-public-accounts-sarah-eckhardt",
       "ballotOrder": {
         "Tarrant": 25,
         "Dallas": 27,
@@ -663,7 +663,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-026",
+      "id": "2026-11-03-comptroller-of-public-accounts-v-alonzo-echavarria-garza",
       "ballotOrder": {
         "Tarrant": 26,
         "Dallas": 28,
@@ -689,7 +689,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-027",
+      "id": "2026-11-03-comptroller-of-public-accounts-shehla-faizi",
       "ballotOrder": {
         "Tarrant": 27,
         "Dallas": 29,
@@ -715,7 +715,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-028",
+      "id": "2026-11-03-commissioner-of-the-general-land-office-dawn-buckingham",
       "ballotOrder": {
         "Tarrant": 28,
         "Dallas": 30,
@@ -741,7 +741,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-029",
+      "id": "2026-11-03-commissioner-of-the-general-land-office-benjamin-flores",
       "ballotOrder": {
         "Tarrant": 29,
         "Dallas": 31,
@@ -767,7 +767,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-030",
+      "id": "2026-11-03-commissioner-of-the-general-land-office-neill-snider",
       "ballotOrder": {
         "Tarrant": 30,
         "Dallas": 32,
@@ -793,7 +793,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-031",
+      "id": "2026-11-03-commissioner-of-agriculture-nate-sheets",
       "ballotOrder": {
         "Tarrant": 31,
         "Dallas": 33,
@@ -819,7 +819,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-032",
+      "id": "2026-11-03-commissioner-of-agriculture-clayton-tucker",
       "ballotOrder": {
         "Tarrant": 32,
         "Dallas": 34,
@@ -845,7 +845,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-033",
+      "id": "2026-11-03-commissioner-of-agriculture-austin-r-kelly",
       "ballotOrder": {
         "Tarrant": 33,
         "Dallas": 35,
@@ -871,7 +871,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-034",
+      "id": "2026-11-03-railroad-commissioner-bo-french",
       "ballotOrder": {
         "Tarrant": 34,
         "Dallas": 36,
@@ -897,7 +897,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-035",
+      "id": "2026-11-03-railroad-commissioner-jon-rosenthal",
       "ballotOrder": {
         "Tarrant": 35,
         "Dallas": 37,
@@ -923,7 +923,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-036",
+      "id": "2026-11-03-railroad-commissioner-arthur-dibianca",
       "ballotOrder": {
         "Tarrant": 36,
         "Dallas": 38,
@@ -949,7 +949,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-037",
+      "id": "2026-11-03-chief-justice-supreme-court-jimmy-blacklock",
       "ballotOrder": {
         "Tarrant": 37,
         "Dallas": 39,
@@ -975,7 +975,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-038",
+      "id": "2026-11-03-chief-justice-supreme-court-maggie-ellis",
       "ballotOrder": {
         "Tarrant": 38,
         "Dallas": 40,
@@ -1001,7 +1001,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-039",
+      "id": "2026-11-03-justice-supreme-court-place-2-unexpired-term-james-p-sullivan",
       "ballotOrder": {
         "Tarrant": 39,
         "Dallas": 41,
@@ -1027,7 +1027,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-040",
+      "id": "2026-11-03-justice-supreme-court-place-2-unexpired-term-chari-kelly",
       "ballotOrder": {
         "Tarrant": 40,
         "Dallas": 42,
@@ -1053,7 +1053,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-041",
+      "id": "2026-11-03-justice-supreme-court-place-7-kyle-hawkins",
       "ballotOrder": {
         "Tarrant": 41,
         "Dallas": 43,
@@ -1079,7 +1079,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-042",
+      "id": "2026-11-03-justice-supreme-court-place-7-kristen-hawkins",
       "ballotOrder": {
         "Tarrant": 42,
         "Dallas": 44,
@@ -1105,7 +1105,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-043",
+      "id": "2026-11-03-justice-supreme-court-place-8-brett-busby",
       "ballotOrder": {
         "Tarrant": 43,
         "Dallas": 45,
@@ -1131,7 +1131,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-044",
+      "id": "2026-11-03-justice-supreme-court-place-8-gisela-d-triana",
       "ballotOrder": {
         "Tarrant": 44,
         "Dallas": 46,
@@ -1157,7 +1157,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-045",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-3-thomas-smith",
       "ballotOrder": {
         "Tarrant": 45,
         "Dallas": 47,
@@ -1183,7 +1183,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-046",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-3-okey-anyiam",
       "ballotOrder": {
         "Tarrant": 46,
         "Dallas": 48,
@@ -1209,7 +1209,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-047",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-3-mark-ash",
       "ballotOrder": {
         "Tarrant": 47,
         "Dallas": 49,
@@ -1235,7 +1235,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-048",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-4-kevin-patrick-yeary",
       "ballotOrder": {
         "Tarrant": 48,
         "Dallas": 50,
@@ -1261,7 +1261,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-049",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-4-audra-riley",
       "ballotOrder": {
         "Tarrant": 49,
         "Dallas": 51,
@@ -1287,7 +1287,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-050",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-9-john-messinger",
       "ballotOrder": {
         "Tarrant": 50,
         "Dallas": 52,
@@ -1313,7 +1313,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-051",
+      "id": "2026-11-03-judge-court-of-criminal-appeals-place-9-holly-taylor",
       "ballotOrder": {
         "Tarrant": 51,
         "Dallas": 53,
@@ -1339,7 +1339,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-052",
+      "id": "2026-11-03-member-state-board-of-education-district-13-carlos-charlie-garza",
       "ballotOrder": {
         "Tarrant": 52,
         "Dallas": 56
@@ -1366,7 +1366,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-053",
+      "id": "2026-11-03-member-state-board-of-education-district-13-tiffany-clark",
       "ballotOrder": {
         "Tarrant": 53,
         "Dallas": 57
@@ -1393,7 +1393,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-054",
+      "id": "2026-11-03-state-senator-district-9-leigh-wambsganss",
       "ballotOrder": {
         "Tarrant": 54
       },
@@ -1418,7 +1418,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-055",
+      "id": "2026-11-03-state-senator-district-9-taylor-rehmet",
       "ballotOrder": {
         "Tarrant": 55
       },
@@ -1443,7 +1443,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-056",
+      "id": "2026-11-03-state-senator-district-22-david-cook",
       "ballotOrder": {
         "Tarrant": 56
       },
@@ -1468,7 +1468,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-057",
+      "id": "2026-11-03-state-senator-district-22-amy-martinez-salas",
       "ballotOrder": {
         "Tarrant": 57
       },
@@ -1493,7 +1493,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-058",
+      "id": "2026-11-03-state-representative-district-90-ramon-romero-jr",
       "ballotOrder": {
         "Tarrant": 58
       },
@@ -1518,7 +1518,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-059",
+      "id": "2026-11-03-state-representative-district-91-david-lowe",
       "ballotOrder": {
         "Tarrant": 59
       },
@@ -1543,7 +1543,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-060",
+      "id": "2026-11-03-state-representative-district-91-yisak-worku",
       "ballotOrder": {
         "Tarrant": 60
       },
@@ -1568,7 +1568,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-061",
+      "id": "2026-11-03-state-representative-district-92-jp-woodruff",
       "ballotOrder": {
         "Tarrant": 61
       },
@@ -1593,7 +1593,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-062",
+      "id": "2026-11-03-state-representative-district-92-salman-bhojani",
       "ballotOrder": {
         "Tarrant": 62
       },
@@ -1618,7 +1618,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-063",
+      "id": "2026-11-03-state-representative-district-93-alan-blaylock",
       "ballotOrder": {
         "Tarrant": 63
       },
@@ -1643,7 +1643,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-064",
+      "id": "2026-11-03-state-representative-district-93-ericka-lomick",
       "ballotOrder": {
         "Tarrant": 64
       },
@@ -1668,7 +1668,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-065",
+      "id": "2026-11-03-state-representative-district-94-cheryl-bean",
       "ballotOrder": {
         "Tarrant": 65
       },
@@ -1693,7 +1693,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-066",
+      "id": "2026-11-03-state-representative-district-94-katie-obrien-duzan",
       "ballotOrder": {
         "Tarrant": 66
       },
@@ -1718,7 +1718,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-067",
+      "id": "2026-11-03-state-representative-district-95-nicole-collier",
       "ballotOrder": {
         "Tarrant": 67
       },
@@ -1743,7 +1743,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-068",
+      "id": "2026-11-03-state-representative-district-96-ellen-fleischmann",
       "ballotOrder": {
         "Tarrant": 68
       },
@@ -1768,7 +1768,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-069",
+      "id": "2026-11-03-state-representative-district-96-ebony-m-turner",
       "ballotOrder": {
         "Tarrant": 69
       },
@@ -1793,7 +1793,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-070",
+      "id": "2026-11-03-state-representative-district-97-john-w-mcqueeney",
       "ballotOrder": {
         "Tarrant": 70
       },
@@ -1818,7 +1818,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-071",
+      "id": "2026-11-03-state-representative-district-97-beth-llewellyn-mclaughlin",
       "ballotOrder": {
         "Tarrant": 71
       },
@@ -1843,7 +1843,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-072",
+      "id": "2026-11-03-state-representative-district-98-armin-mizani",
       "ballotOrder": {
         "Tarrant": 72
       },
@@ -1868,7 +1868,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-073",
+      "id": "2026-11-03-state-representative-district-98-cate-brennan",
       "ballotOrder": {
         "Tarrant": 73
       },
@@ -1893,7 +1893,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-074",
+      "id": "2026-11-03-state-representative-district-99-charlie-geren",
       "ballotOrder": {
         "Tarrant": 74
       },
@@ -1918,7 +1918,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-075",
+      "id": "2026-11-03-state-representative-district-99-michelle-winder",
       "ballotOrder": {
         "Tarrant": 75
       },
@@ -1943,7 +1943,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-076",
+      "id": "2026-11-03-state-representative-district-101-junior-ezeonu",
       "ballotOrder": {
         "Tarrant": 76
       },
@@ -1968,7 +1968,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-077",
+      "id": "2026-11-03-chief-justice-15th-court-of-appeals-district-scott-brister",
       "ballotOrder": {
         "Tarrant": 77,
         "Dallas": 85,
@@ -1994,7 +1994,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-078",
+      "id": "2026-11-03-chief-justice-15th-court-of-appeals-district-jerry-zimmerer",
       "ballotOrder": {
         "Tarrant": 78,
         "Dallas": 86,
@@ -2020,7 +2020,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-079",
+      "id": "2026-11-03-justice-15th-court-of-appeals-district-place-2-scott-k-field",
       "ballotOrder": {
         "Tarrant": 79,
         "Dallas": 87,
@@ -2046,7 +2046,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-080",
+      "id": "2026-11-03-justice-15th-court-of-appeals-district-place-2-tom-baker",
       "ballotOrder": {
         "Tarrant": 80,
         "Dallas": 88,
@@ -2072,7 +2072,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-081",
+      "id": "2026-11-03-justice-15th-court-of-appeals-district-place-3-april-farris",
       "ballotOrder": {
         "Tarrant": 81,
         "Dallas": 89,
@@ -2098,7 +2098,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-082",
+      "id": "2026-11-03-justice-15th-court-of-appeals-district-place-3-marc-m-meyer",
       "ballotOrder": {
         "Tarrant": 82,
         "Dallas": 90,
@@ -2124,7 +2124,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-083",
+      "id": "2026-11-03-justice-2nd-court-of-appeals-district-place-2-chris-taylor",
       "ballotOrder": {
         "Tarrant": 83
       },
@@ -2146,7 +2146,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-084",
+      "id": "2026-11-03-justice-2nd-court-of-appeals-district-place-7-brian-walker",
       "ballotOrder": {
         "Tarrant": 84
       },
@@ -2168,7 +2168,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-085",
+      "id": "2026-11-03-tarrant-district-judge-141st-judicial-district-john-p-chupp",
       "ballotOrder": {
         "Tarrant": 85
       },
@@ -2190,7 +2190,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-086",
+      "id": "2026-11-03-tarrant-district-judge-213th-judicial-district-unexpired-term-michael-ferry",
       "ballotOrder": {
         "Tarrant": 86
       },
@@ -2212,7 +2212,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-087",
+      "id": "2026-11-03-tarrant-district-judge-213th-judicial-district-unexpired-term-arthurine-anhthu-kamphaus",
       "ballotOrder": {
         "Tarrant": 87
       },
@@ -2234,7 +2234,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-088",
+      "id": "2026-11-03-tarrant-district-judge-231st-judicial-district-leslie-barrows",
       "ballotOrder": {
         "Tarrant": 88
       },
@@ -2256,7 +2256,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-089",
+      "id": "2026-11-03-tarrant-district-judge-231st-judicial-district-lyndsay-newell",
       "ballotOrder": {
         "Tarrant": 89
       },
@@ -2278,7 +2278,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-090",
+      "id": "2026-11-03-tarrant-district-judge-233rd-judicial-district-kenneth-e-newell",
       "ballotOrder": {
         "Tarrant": 90
       },
@@ -2300,7 +2300,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-091",
+      "id": "2026-11-03-tarrant-district-judge-236th-judicial-district-dusty-fillmore",
       "ballotOrder": {
         "Tarrant": 91
       },
@@ -2322,7 +2322,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-092",
+      "id": "2026-11-03-tarrant-district-judge-236th-judicial-district-katherine-kate-kim",
       "ballotOrder": {
         "Tarrant": 92
       },
@@ -2344,7 +2344,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-093",
+      "id": "2026-11-03-tarrant-district-judge-297th-judicial-district-amy-allin",
       "ballotOrder": {
         "Tarrant": 93
       },
@@ -2366,7 +2366,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-094",
+      "id": "2026-11-03-tarrant-district-judge-297th-judicial-district-fred-howey",
       "ballotOrder": {
         "Tarrant": 94
       },
@@ -2388,7 +2388,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-095",
+      "id": "2026-11-03-tarrant-district-judge-322nd-judicial-district-james-b-munford",
       "ballotOrder": {
         "Tarrant": 95
       },
@@ -2410,7 +2410,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-096",
+      "id": "2026-11-03-tarrant-district-judge-323rd-judicial-district-alex-kim",
       "ballotOrder": {
         "Tarrant": 96
       },
@@ -2432,7 +2432,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-097",
+      "id": "2026-11-03-tarrant-district-judge-323rd-judicial-district-brian-willett",
       "ballotOrder": {
         "Tarrant": 97
       },
@@ -2454,7 +2454,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-098",
+      "id": "2026-11-03-tarrant-district-judge-324th-judicial-district-andy-hsu",
       "ballotOrder": {
         "Tarrant": 98
       },
@@ -2476,7 +2476,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-099",
+      "id": "2026-11-03-tarrant-district-judge-324th-judicial-district-crystal-gayden",
       "ballotOrder": {
         "Tarrant": 99
       },
@@ -2498,7 +2498,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-100",
+      "id": "2026-11-03-tarrant-district-judge-325th-judicial-district-cynthia-terry",
       "ballotOrder": {
         "Tarrant": 100
       },
@@ -2520,7 +2520,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-101",
+      "id": "2026-11-03-tarrant-district-judge-325th-judicial-district-andy-griffin",
       "ballotOrder": {
         "Tarrant": 101
       },
@@ -2542,7 +2542,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-102",
+      "id": "2026-11-03-tarrant-district-judge-371st-judicial-district-ryan-hill",
       "ballotOrder": {
         "Tarrant": 102
       },
@@ -2564,7 +2564,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-103",
+      "id": "2026-11-03-tarrant-district-judge-371st-judicial-district-marquetta-marq-clayton",
       "ballotOrder": {
         "Tarrant": 103
       },
@@ -2586,7 +2586,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-104",
+      "id": "2026-11-03-tarrant-district-judge-372nd-judicial-district-julie-lugo",
       "ballotOrder": {
         "Tarrant": 104
       },
@@ -2608,7 +2608,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-105",
+      "id": "2026-11-03-tarrant-district-judge-432nd-judicial-district-lee-sorrells",
       "ballotOrder": {
         "Tarrant": 105
       },
@@ -2630,7 +2630,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-106",
+      "id": "2026-11-03-tarrant-district-judge-432nd-judicial-district-courtney-miller",
       "ballotOrder": {
         "Tarrant": 106
       },
@@ -2652,7 +2652,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-107",
+      "id": "2026-11-03-tarrant-district-judge-485th-judicial-district-steven-jumes",
       "ballotOrder": {
         "Tarrant": 107
       },
@@ -2674,7 +2674,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-108",
+      "id": "2026-11-03-tarrant-criminal-district-judge-1-tarrant-county-sherri-wagner",
       "ballotOrder": {
         "Tarrant": 108
       },
@@ -2696,7 +2696,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-109",
+      "id": "2026-11-03-tarrant-criminal-district-judge-1-tarrant-county-cindy-stormer",
       "ballotOrder": {
         "Tarrant": 109
       },
@@ -2718,7 +2718,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-110",
+      "id": "2026-11-03-tarrant-criminal-district-judge-3-tarrant-county-douglas-allen",
       "ballotOrder": {
         "Tarrant": 110
       },
@@ -2740,7 +2740,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-111",
+      "id": "2026-11-03-tarrant-criminal-district-judge-4-tarrant-county-andy-porter",
       "ballotOrder": {
         "Tarrant": 111
       },
@@ -2762,7 +2762,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-112",
+      "id": "2026-11-03-tarrant-criminal-district-judge-4-tarrant-county-john-brender",
       "ballotOrder": {
         "Tarrant": 112
       },
@@ -2784,7 +2784,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-113",
+      "id": "2026-11-03-tarrant-criminal-district-attorney-tarrant-county-phil-sorrells",
       "ballotOrder": {
         "Tarrant": 113
       },
@@ -2806,7 +2806,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-114",
+      "id": "2026-11-03-tarrant-criminal-district-attorney-tarrant-county-tiffany-burks",
       "ballotOrder": {
         "Tarrant": 114
       },
@@ -2828,7 +2828,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-115",
+      "id": "2026-11-03-tarrant-county-judge-tim-ohare",
       "ballotOrder": {
         "Tarrant": 115
       },
@@ -2850,7 +2850,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-116",
+      "id": "2026-11-03-tarrant-county-judge-alisa-simmons",
       "ballotOrder": {
         "Tarrant": 116
       },
@@ -2872,7 +2872,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-117",
+      "id": "2026-11-03-tarrant-county-judge-bryan-kidd",
       "ballotOrder": {
         "Tarrant": 117
       },
@@ -2894,7 +2894,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-118",
+      "id": "2026-11-03-tarrant-judge-county-court-at-law-no-1-don-pierson",
       "ballotOrder": {
         "Tarrant": 118
       },
@@ -2916,7 +2916,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-119",
+      "id": "2026-11-03-tarrant-judge-county-court-at-law-no-2-jennifer-rymell",
       "ballotOrder": {
         "Tarrant": 119
       },
@@ -2938,7 +2938,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-120",
+      "id": "2026-11-03-tarrant-judge-county-court-at-law-no-3-mike-hrabal",
       "ballotOrder": {
         "Tarrant": 120
       },
@@ -2960,7 +2960,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-121",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-1-david-cook",
       "ballotOrder": {
         "Tarrant": 121
       },
@@ -2982,7 +2982,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-122",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-2-carey-walker",
       "ballotOrder": {
         "Tarrant": 122
       },
@@ -3004,7 +3004,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-123",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-3-bob-mccoy",
       "ballotOrder": {
         "Tarrant": 123
       },
@@ -3026,7 +3026,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-124",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-4-deborah-nekhom",
       "ballotOrder": {
         "Tarrant": 124
       },
@@ -3048,7 +3048,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-125",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-5-brad-clark",
       "ballotOrder": {
         "Tarrant": 125
       },
@@ -3070,7 +3070,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-126",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-5-julya-jujubill-billhymer",
       "ballotOrder": {
         "Tarrant": 126
       },
@@ -3092,7 +3092,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-127",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-6-randi-hartin",
       "ballotOrder": {
         "Tarrant": 127
       },
@@ -3114,7 +3114,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-128",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-7-eric-starnes",
       "ballotOrder": {
         "Tarrant": 128
       },
@@ -3136,7 +3136,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-129",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-8-charles-l-chuck-vanover",
       "ballotOrder": {
         "Tarrant": 129
       },
@@ -3158,7 +3158,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-130",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-9-brian-bolton",
       "ballotOrder": {
         "Tarrant": 130
       },
@@ -3180,7 +3180,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-131",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-9-lesa-pamplin",
       "ballotOrder": {
         "Tarrant": 131
       },
@@ -3202,7 +3202,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-132",
+      "id": "2026-11-03-tarrant-judge-county-criminal-court-no-10-trent-loftin",
       "ballotOrder": {
         "Tarrant": 132
       },
@@ -3224,7 +3224,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-133",
+      "id": "2026-11-03-tarrant-judge-probate-court-no-1-patricia-burns",
       "ballotOrder": {
         "Tarrant": 133
       },
@@ -3246,7 +3246,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-134",
+      "id": "2026-11-03-tarrant-judge-probate-court-no-2-brook-bell",
       "ballotOrder": {
         "Tarrant": 134
       },
@@ -3268,7 +3268,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-135",
+      "id": "2026-11-03-tarrant-district-clerk-tom-wilder",
       "ballotOrder": {
         "Tarrant": 135
       },
@@ -3290,7 +3290,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-136",
+      "id": "2026-11-03-tarrant-district-clerk-nathan-smith",
       "ballotOrder": {
         "Tarrant": 136
       },
@@ -3312,7 +3312,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-137",
+      "id": "2026-11-03-tarrant-county-clerk-mary-louise-nicholson",
       "ballotOrder": {
         "Tarrant": 137
       },
@@ -3334,7 +3334,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-138",
+      "id": "2026-11-03-tarrant-county-clerk-lydia-bean",
       "ballotOrder": {
         "Tarrant": 138
       },
@@ -3356,7 +3356,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-139",
+      "id": "2026-11-03-tarrant-county-commissioner-precinct-2-tony-tinderholt",
       "ballotOrder": {
         "Tarrant": 139
       },
@@ -3381,7 +3381,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-140",
+      "id": "2026-11-03-tarrant-county-commissioner-precinct-2-jared-williams",
       "ballotOrder": {
         "Tarrant": 140
       },
@@ -3406,7 +3406,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-141",
+      "id": "2026-11-03-tarrant-county-commissioner-precinct-4-manny-ramirez",
       "ballotOrder": {
         "Tarrant": 141
       },
@@ -3431,7 +3431,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-142",
+      "id": "2026-11-03-tarrant-county-commissioner-precinct-4-nydia-cardenas",
       "ballotOrder": {
         "Tarrant": 142
       },
@@ -3456,7 +3456,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-143",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-1-ricky-rodriguez",
       "ballotOrder": {
         "Tarrant": 143
       },
@@ -3481,7 +3481,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-144",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-2-mary-tom-cravens-curnutt",
       "ballotOrder": {
         "Tarrant": 144
       },
@@ -3506,7 +3506,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-145",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-2-celina-vasquez",
       "ballotOrder": {
         "Tarrant": 145
       },
@@ -3531,7 +3531,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-146",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-3-william-p-bill-brandt",
       "ballotOrder": {
         "Tarrant": 146
       },
@@ -3556,7 +3556,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-147",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-4-christopher-chris-gregory",
       "ballotOrder": {
         "Tarrant": 147
       },
@@ -3581,7 +3581,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-148",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-4-rodney-lee",
       "ballotOrder": {
         "Tarrant": 148
       },
@@ -3606,7 +3606,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-149",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-5-sergio-l-de-leon",
       "ballotOrder": {
         "Tarrant": 149
       },
@@ -3631,7 +3631,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-150",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-6-jason-m-charbonnet",
       "ballotOrder": {
         "Tarrant": 150
       },
@@ -3656,7 +3656,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-151",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-7-paige-payne-neal",
       "ballotOrder": {
         "Tarrant": 151
       },
@@ -3681,7 +3681,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-152",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-7-kenneth-d-sanders",
       "ballotOrder": {
         "Tarrant": 152
       },
@@ -3706,7 +3706,7 @@
       "donations": []
     },
     {
-      "id": "tc-2026-11-153",
+      "id": "2026-11-03-tarrant-justice-of-the-peace-precinct-8-lisa-woodard",
       "ballotOrder": {
         "Tarrant": 153
       },
@@ -3731,7 +3731,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-001",
+      "id": "2026-11-03-u-s-representative-district-5-lance-gooden",
       "ballotOrder": {
         "Dallas": 4
       },
@@ -3756,7 +3756,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-002",
+      "id": "2026-11-03-u-s-representative-district-5-chelsey-hockett",
       "ballotOrder": {
         "Dallas": 5
       },
@@ -3781,7 +3781,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-003",
+      "id": "2026-11-03-u-s-representative-district-32-jace-yarbrough",
       "ballotOrder": {
         "Dallas": 12,
         "Collin": 8
@@ -3808,7 +3808,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-004",
+      "id": "2026-11-03-u-s-representative-district-32-dan-barrios",
       "ballotOrder": {
         "Dallas": 13,
         "Collin": 9
@@ -3835,7 +3835,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-005",
+      "id": "2026-11-03-u-s-representative-district-33-patrick-david-gillespie",
       "ballotOrder": {
         "Dallas": 14
       },
@@ -3860,7 +3860,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-006",
+      "id": "2026-11-03-u-s-representative-district-33-colin-allred",
       "ballotOrder": {
         "Dallas": 15
       },
@@ -3885,7 +3885,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-007",
+      "id": "2026-11-03-member-state-board-of-education-district-9-kason-huddleston",
       "ballotOrder": {
         "Dallas": 54
       },
@@ -3910,7 +3910,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-008",
+      "id": "2026-11-03-member-state-board-of-education-district-9-ericka-ledferd",
       "ballotOrder": {
         "Dallas": 55
       },
@@ -3935,7 +3935,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-009",
+      "id": "2026-11-03-member-state-board-of-education-district-14-mindy-bumgarner",
       "ballotOrder": {
         "Dallas": 58
       },
@@ -3960,7 +3960,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-010",
+      "id": "2026-11-03-member-state-board-of-education-district-14-amy-taylor",
       "ballotOrder": {
         "Dallas": 59
       },
@@ -3985,7 +3985,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-011",
+      "id": "2026-11-03-state-senator-district-2-bob-hall",
       "ballotOrder": {
         "Dallas": 60,
         "Collin": 48
@@ -4012,7 +4012,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-012",
+      "id": "2026-11-03-state-senator-district-2-keenen-colbert",
       "ballotOrder": {
         "Dallas": 61,
         "Collin": 49
@@ -4039,7 +4039,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-013",
+      "id": "2026-11-03-state-representative-district-100-jordan-scott-hoffnagle",
       "ballotOrder": {
         "Dallas": 62
       },
@@ -4064,7 +4064,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-014",
+      "id": "2026-11-03-state-representative-district-100-venton-jones",
       "ballotOrder": {
         "Dallas": 63
       },
@@ -4089,7 +4089,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-015",
+      "id": "2026-11-03-state-representative-district-102-bonnie-abadie",
       "ballotOrder": {
         "Dallas": 64
       },
@@ -4114,7 +4114,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-016",
+      "id": "2026-11-03-state-representative-district-102-ana-maria-rodriguez-ramos",
       "ballotOrder": {
         "Dallas": 65
       },
@@ -4139,7 +4139,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-017",
+      "id": "2026-11-03-state-representative-district-103-melanie-medley-thomas",
       "ballotOrder": {
         "Dallas": 66
       },
@@ -4164,7 +4164,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-018",
+      "id": "2026-11-03-state-representative-district-103-rafael-anchia",
       "ballotOrder": {
         "Dallas": 67
       },
@@ -4189,7 +4189,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-019",
+      "id": "2026-11-03-state-representative-district-104-jessica-gonzalez",
       "ballotOrder": {
         "Dallas": 68
       },
@@ -4214,7 +4214,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-020",
+      "id": "2026-11-03-state-representative-district-105-terry-meza",
       "ballotOrder": {
         "Dallas": 69
       },
@@ -4239,7 +4239,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-021",
+      "id": "2026-11-03-state-representative-district-107-linda-garcia",
       "ballotOrder": {
         "Dallas": 70
       },
@@ -4264,7 +4264,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-022",
+      "id": "2026-11-03-state-representative-district-108-morgan-meyer",
       "ballotOrder": {
         "Dallas": 71
       },
@@ -4289,7 +4289,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-023",
+      "id": "2026-11-03-state-representative-district-108-allison-mitchell",
       "ballotOrder": {
         "Dallas": 72
       },
@@ -4314,7 +4314,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-024",
+      "id": "2026-11-03-state-representative-district-109-will-campbell",
       "ballotOrder": {
         "Dallas": 73
       },
@@ -4339,7 +4339,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-025",
+      "id": "2026-11-03-state-representative-district-109-aicha-davis",
       "ballotOrder": {
         "Dallas": 74
       },
@@ -4364,7 +4364,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-026",
+      "id": "2026-11-03-state-representative-district-110-toni-rose",
       "ballotOrder": {
         "Dallas": 75
       },
@@ -4389,7 +4389,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-027",
+      "id": "2026-11-03-state-representative-district-111-yvonne-davis",
       "ballotOrder": {
         "Dallas": 76
       },
@@ -4414,7 +4414,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-028",
+      "id": "2026-11-03-state-representative-district-112-angie-chen-button",
       "ballotOrder": {
         "Dallas": 77
       },
@@ -4439,7 +4439,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-029",
+      "id": "2026-11-03-state-representative-district-112-zach-herbert",
       "ballotOrder": {
         "Dallas": 78
       },
@@ -4464,7 +4464,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-030",
+      "id": "2026-11-03-state-representative-district-113-stephen-w-stanley",
       "ballotOrder": {
         "Dallas": 79
       },
@@ -4489,7 +4489,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-031",
+      "id": "2026-11-03-state-representative-district-113-rhetta-andrews-bowers",
       "ballotOrder": {
         "Dallas": 80
       },
@@ -4514,7 +4514,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-032",
+      "id": "2026-11-03-state-representative-district-114-tim-mcdonough",
       "ballotOrder": {
         "Dallas": 81
       },
@@ -4539,7 +4539,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-033",
+      "id": "2026-11-03-state-representative-district-114-john-bryant",
       "ballotOrder": {
         "Dallas": 82
       },
@@ -4564,7 +4564,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-034",
+      "id": "2026-11-03-state-representative-district-115-danny-rosellini",
       "ballotOrder": {
         "Dallas": 83
       },
@@ -4589,7 +4589,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-035",
+      "id": "2026-11-03-state-representative-district-115-cassandra-hernandez",
       "ballotOrder": {
         "Dallas": 84
       },
@@ -4614,7 +4614,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-036",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-3-matthew-kolodoski",
       "ballotOrder": {
         "Dallas": 91,
         "Collin": 69
@@ -4641,7 +4641,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-037",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-3-amanda-reichek",
       "ballotOrder": {
         "Dallas": 92,
         "Collin": 70
@@ -4668,7 +4668,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-038",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-6-ben-smith",
       "ballotOrder": {
         "Dallas": 93,
         "Collin": 71
@@ -4695,7 +4695,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-039",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-6-monica-purdy",
       "ballotOrder": {
         "Dallas": 94,
         "Collin": 72
@@ -4722,7 +4722,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-040",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-8-ashley-wysocki",
       "ballotOrder": {
         "Dallas": 95,
         "Collin": 73
@@ -4749,7 +4749,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-041",
+      "id": "2026-11-03-justice-5th-court-of-appeals-district-place-8-andrea-d-plumlee",
       "ballotOrder": {
         "Dallas": 96,
         "Collin": 74
@@ -4776,7 +4776,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-042",
+      "id": "2026-11-03-dallas-district-judge-44th-judicial-district-veretta-frazier",
       "ballotOrder": {
         "Dallas": 97
       },
@@ -4798,7 +4798,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-043",
+      "id": "2026-11-03-dallas-district-judge-68th-judicial-district-martin-hoffman",
       "ballotOrder": {
         "Dallas": 98
       },
@@ -4820,7 +4820,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-044",
+      "id": "2026-11-03-dallas-district-judge-101st-judicial-district-staci-williams",
       "ballotOrder": {
         "Dallas": 99
       },
@@ -4842,7 +4842,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-045",
+      "id": "2026-11-03-dallas-district-judge-116th-judicial-district-tonya-parker",
       "ballotOrder": {
         "Dallas": 100
       },
@@ -4864,7 +4864,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-046",
+      "id": "2026-11-03-dallas-district-judge-134th-judicial-district-dale-tillery",
       "ballotOrder": {
         "Dallas": 101
       },
@@ -4886,7 +4886,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-047",
+      "id": "2026-11-03-dallas-district-judge-160th-judicial-district-aiesha-redmond",
       "ballotOrder": {
         "Dallas": 102
       },
@@ -4908,7 +4908,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-048",
+      "id": "2026-11-03-dallas-district-judge-191st-judicial-district-elizabeth-ginsberg",
       "ballotOrder": {
         "Dallas": 103
       },
@@ -4930,7 +4930,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-049",
+      "id": "2026-11-03-dallas-district-judge-192nd-judicial-district-maria-aceves",
       "ballotOrder": {
         "Dallas": 104
       },
@@ -4952,7 +4952,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-050",
+      "id": "2026-11-03-dallas-district-judge-193rd-judicial-district-bridgett-whitmore",
       "ballotOrder": {
         "Dallas": 105
       },
@@ -4974,7 +4974,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-051",
+      "id": "2026-11-03-dallas-district-judge-194th-judicial-district-kim-cooks",
       "ballotOrder": {
         "Dallas": 106
       },
@@ -4996,7 +4996,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-052",
+      "id": "2026-11-03-dallas-district-judge-195th-judicial-district-etta-jeanette-mullin",
       "ballotOrder": {
         "Dallas": 107
       },
@@ -5018,7 +5018,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-053",
+      "id": "2026-11-03-dallas-district-judge-203rd-judicial-district-raquel-rocky-jones",
       "ballotOrder": {
         "Dallas": 108
       },
@@ -5040,7 +5040,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-054",
+      "id": "2026-11-03-dallas-district-judge-204th-judicial-district-tammy-kemp",
       "ballotOrder": {
         "Dallas": 109
       },
@@ -5062,7 +5062,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-055",
+      "id": "2026-11-03-dallas-district-judge-254th-judicial-district-kim-brown",
       "ballotOrder": {
         "Dallas": 110
       },
@@ -5084,7 +5084,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-056",
+      "id": "2026-11-03-dallas-district-judge-255th-judicial-district-vonda-bailey",
       "ballotOrder": {
         "Dallas": 111
       },
@@ -5106,7 +5106,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-057",
+      "id": "2026-11-03-dallas-district-judge-256th-judicial-district-heather-nicole-johnson",
       "ballotOrder": {
         "Dallas": 112
       },
@@ -5128,7 +5128,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-058",
+      "id": "2026-11-03-dallas-district-judge-265th-judicial-district-jennifer-bennett",
       "ballotOrder": {
         "Dallas": 113
       },
@@ -5150,7 +5150,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-059",
+      "id": "2026-11-03-dallas-district-judge-282nd-judicial-district-alison-grinter-allen",
       "ballotOrder": {
         "Dallas": 114
       },
@@ -5172,7 +5172,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-060",
+      "id": "2026-11-03-dallas-district-judge-283rd-judicial-district-lela-lawrence-mays",
       "ballotOrder": {
         "Dallas": 115
       },
@@ -5194,7 +5194,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-061",
+      "id": "2026-11-03-dallas-district-judge-291st-judicial-district-stephanie-n-mitchell-huff",
       "ballotOrder": {
         "Dallas": 116
       },
@@ -5216,7 +5216,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-062",
+      "id": "2026-11-03-dallas-district-judge-292nd-judicial-district-brandon-birmingham",
       "ballotOrder": {
         "Dallas": 117
       },
@@ -5238,7 +5238,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-063",
+      "id": "2026-11-03-dallas-district-judge-298th-judicial-district-clark-b-will",
       "ballotOrder": {
         "Dallas": 118
       },
@@ -5260,7 +5260,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-064",
+      "id": "2026-11-03-dallas-district-judge-298th-judicial-district-ashley-smith",
       "ballotOrder": {
         "Dallas": 119
       },
@@ -5282,7 +5282,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-065",
+      "id": "2026-11-03-dallas-district-judge-301st-judicial-district-danielle-clark",
       "ballotOrder": {
         "Dallas": 120
       },
@@ -5304,7 +5304,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-066",
+      "id": "2026-11-03-dallas-district-judge-302nd-judicial-district-sandra-jackson",
       "ballotOrder": {
         "Dallas": 121
       },
@@ -5326,7 +5326,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-067",
+      "id": "2026-11-03-dallas-district-judge-303rd-judicial-district-ladeitra-adkins",
       "ballotOrder": {
         "Dallas": 122
       },
@@ -5348,7 +5348,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-068",
+      "id": "2026-11-03-dallas-district-judge-304th-judicial-district-andrea-martin",
       "ballotOrder": {
         "Dallas": 123
       },
@@ -5370,7 +5370,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-069",
+      "id": "2026-11-03-dallas-district-judge-305th-judicial-district-cheryl-lee-shannon",
       "ballotOrder": {
         "Dallas": 124
       },
@@ -5392,7 +5392,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-070",
+      "id": "2026-11-03-dallas-district-judge-330th-judicial-district-tamika-jones",
       "ballotOrder": {
         "Dallas": 125
       },
@@ -5414,7 +5414,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-071",
+      "id": "2026-11-03-dallas-district-judge-363rd-judicial-district-cynthia-garza",
       "ballotOrder": {
         "Dallas": 126
       },
@@ -5436,7 +5436,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-072",
+      "id": "2026-11-03-dallas-criminal-district-judge-dallas-county-number-1-stephanie-hudson",
       "ballotOrder": {
         "Dallas": 127
       },
@@ -5458,7 +5458,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-073",
+      "id": "2026-11-03-dallas-criminal-district-judge-dallas-county-number-5-lakesha-smith",
       "ballotOrder": {
         "Dallas": 128
       },
@@ -5480,7 +5480,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-074",
+      "id": "2026-11-03-dallas-criminal-district-judge-dallas-county-number-6-nancy-mulder",
       "ballotOrder": {
         "Dallas": 129
       },
@@ -5502,7 +5502,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-075",
+      "id": "2026-11-03-dallas-criminal-district-judge-dallas-county-number-7-chika-anyiam",
       "ballotOrder": {
         "Dallas": 130
       },
@@ -5524,7 +5524,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-076",
+      "id": "2026-11-03-dallas-criminal-district-attorney-dallas-county-amber-givens",
       "ballotOrder": {
         "Dallas": 131
       },
@@ -5546,7 +5546,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-077",
+      "id": "2026-11-03-dallas-county-judge-mike-immler",
       "ballotOrder": {
         "Dallas": 132
       },
@@ -5568,7 +5568,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-078",
+      "id": "2026-11-03-dallas-county-judge-clay-jenkins",
       "ballotOrder": {
         "Dallas": 133
       },
@@ -5590,7 +5590,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-079",
+      "id": "2026-11-03-dallas-judge-county-court-at-law-no-1-erin-nowell",
       "ballotOrder": {
         "Dallas": 134
       },
@@ -5612,7 +5612,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-080",
+      "id": "2026-11-03-dallas-judge-county-court-at-law-no-2-melissa-j-bellan",
       "ballotOrder": {
         "Dallas": 135
       },
@@ -5634,7 +5634,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-081",
+      "id": "2026-11-03-dallas-judge-county-court-at-law-no-3-sally-montgomery",
       "ballotOrder": {
         "Dallas": 136
       },
@@ -5656,7 +5656,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-082",
+      "id": "2026-11-03-dallas-judge-county-court-at-law-no-4-dianne-jones",
       "ballotOrder": {
         "Dallas": 137
       },
@@ -5678,7 +5678,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-083",
+      "id": "2026-11-03-dallas-judge-county-court-at-law-no-5-nicole-taylor",
       "ballotOrder": {
         "Dallas": 138
       },
@@ -5700,7 +5700,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-084",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-of-appeals-no-1-alexandra-guio",
       "ballotOrder": {
         "Dallas": 139
       },
@@ -5722,7 +5722,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-085",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-of-appeals-no-2-cheryl-williams",
       "ballotOrder": {
         "Dallas": 140
       },
@@ -5744,7 +5744,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-086",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-1-tifanee-baker",
       "ballotOrder": {
         "Dallas": 141
       },
@@ -5766,7 +5766,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-087",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-2-julia-hayes",
       "ballotOrder": {
         "Dallas": 142
       },
@@ -5788,7 +5788,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-088",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-3-audrey-faye-moorehead",
       "ballotOrder": {
         "Dallas": 143
       },
@@ -5810,7 +5810,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-089",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-4-dominique-torres-williams",
       "ballotOrder": {
         "Dallas": 144
       },
@@ -5832,7 +5832,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-090",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-5-lisa-green",
       "ballotOrder": {
         "Dallas": 145
       },
@@ -5854,7 +5854,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-091",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-6-angela-m-king",
       "ballotOrder": {
         "Dallas": 146
       },
@@ -5876,7 +5876,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-092",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-7-remeko-tranisha-edwards",
       "ballotOrder": {
         "Dallas": 147
       },
@@ -5898,7 +5898,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-093",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-8-carmen-white",
       "ballotOrder": {
         "Dallas": 148
       },
@@ -5920,7 +5920,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-094",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-9-carrie-singleton",
       "ballotOrder": {
         "Dallas": 149
       },
@@ -5942,7 +5942,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-095",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-10-monique-j-bracey-huff",
       "ballotOrder": {
         "Dallas": 150
       },
@@ -5964,7 +5964,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-096",
+      "id": "2026-11-03-dallas-judge-county-criminal-court-at-law-no-11-shequitta-d-kelly",
       "ballotOrder": {
         "Dallas": 151
       },
@@ -5986,7 +5986,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-097",
+      "id": "2026-11-03-dallas-judge-probate-court-no-1-julia-malveaux",
       "ballotOrder": {
         "Dallas": 152
       },
@@ -6008,7 +6008,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-098",
+      "id": "2026-11-03-dallas-judge-probate-court-no-2-ingrid-michelle-warren",
       "ballotOrder": {
         "Dallas": 153
       },
@@ -6030,7 +6030,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-099",
+      "id": "2026-11-03-dallas-judge-probate-court-no-3-margaret-jones-johnson",
       "ballotOrder": {
         "Dallas": 154
       },
@@ -6052,7 +6052,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-100",
+      "id": "2026-11-03-dallas-district-clerk-dave-muehlhaeusler",
       "ballotOrder": {
         "Dallas": 155
       },
@@ -6074,7 +6074,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-101",
+      "id": "2026-11-03-dallas-district-clerk-felicia-pitre",
       "ballotOrder": {
         "Dallas": 156
       },
@@ -6096,7 +6096,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-102",
+      "id": "2026-11-03-dallas-county-clerk-skye-garcia",
       "ballotOrder": {
         "Dallas": 157
       },
@@ -6118,7 +6118,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-103",
+      "id": "2026-11-03-dallas-county-clerk-damarcus-l-offord",
       "ballotOrder": {
         "Dallas": 158
       },
@@ -6140,7 +6140,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-104",
+      "id": "2026-11-03-dallas-county-treasurer-corsandra-brigham-phelps",
       "ballotOrder": {
         "Dallas": 159
       },
@@ -6162,7 +6162,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-105",
+      "id": "2026-11-03-dallas-county-treasurer-pauline-medrano",
       "ballotOrder": {
         "Dallas": 160
       },
@@ -6184,7 +6184,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-106",
+      "id": "2026-11-03-dallas-county-commissioner-precinct-2-barry-wernick",
       "ballotOrder": {
         "Dallas": 161
       },
@@ -6209,7 +6209,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-107",
+      "id": "2026-11-03-dallas-county-commissioner-precinct-2-andy-sommerman",
       "ballotOrder": {
         "Dallas": 162
       },
@@ -6234,7 +6234,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-108",
+      "id": "2026-11-03-dallas-county-commissioner-precinct-4-elba-garcia",
       "ballotOrder": {
         "Dallas": 163
       },
@@ -6259,7 +6259,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-109",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-1-place-1-lizbeth-diaz",
       "ballotOrder": {
         "Dallas": 164
       },
@@ -6284,7 +6284,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-110",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-1-place-1-thomas-g-jones",
       "ballotOrder": {
         "Dallas": 165
       },
@@ -6309,7 +6309,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-111",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-1-place-2-valencia-nash",
       "ballotOrder": {
         "Dallas": 166
       },
@@ -6334,7 +6334,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-112",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-2-place-1-vickie-whiteside",
       "ballotOrder": {
         "Dallas": 167
       },
@@ -6359,7 +6359,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-113",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-2-place-1-margaret-obrien",
       "ballotOrder": {
         "Dallas": 168
       },
@@ -6384,7 +6384,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-114",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-2-place-2-antoinette-n-harris",
       "ballotOrder": {
         "Dallas": 169
       },
@@ -6409,7 +6409,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-115",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-3-place-1-lynn-a-benedetto",
       "ballotOrder": {
         "Dallas": 170
       },
@@ -6434,7 +6434,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-116",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-3-place-1-adam-m-swartz",
       "ballotOrder": {
         "Dallas": 171
       },
@@ -6459,7 +6459,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-117",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-3-place-2-michael-l-geller",
       "ballotOrder": {
         "Dallas": 172
       },
@@ -6484,7 +6484,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-118",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-3-place-2-paula-m-rosales",
       "ballotOrder": {
         "Dallas": 173
       },
@@ -6509,7 +6509,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-119",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-4-place-1-fred-van-liew",
       "ballotOrder": {
         "Dallas": 174
       },
@@ -6534,7 +6534,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-120",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-4-place-1-mike-jones",
       "ballotOrder": {
         "Dallas": 175
       },
@@ -6559,7 +6559,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-121",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-4-place-2-sasha-moreno",
       "ballotOrder": {
         "Dallas": 176
       },
@@ -6584,7 +6584,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-122",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-5-place-1-sara-martinez",
       "ballotOrder": {
         "Dallas": 177
       },
@@ -6609,7 +6609,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-123",
+      "id": "2026-11-03-dallas-justice-of-the-peace-precinct-5-place-2-omar-narvaez",
       "ballotOrder": {
         "Dallas": 178
       },
@@ -6634,7 +6634,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-124",
+      "id": "2026-11-03-dallas-county-constable-precinct-1-tracey-gulley",
       "ballotOrder": {
         "Dallas": 179
       },
@@ -6659,7 +6659,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-125",
+      "id": "2026-11-03-dallas-county-constable-precinct-2-chad-calvert",
       "ballotOrder": {
         "Dallas": 180
       },
@@ -6684,7 +6684,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-126",
+      "id": "2026-11-03-dallas-county-constable-precinct-2-deanna-hammond",
       "ballotOrder": {
         "Dallas": 181
       },
@@ -6709,7 +6709,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-127",
+      "id": "2026-11-03-dallas-county-constable-precinct-3-henry-curry",
       "ballotOrder": {
         "Dallas": 182
       },
@@ -6734,7 +6734,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-128",
+      "id": "2026-11-03-dallas-county-constable-precinct-4-eddie-brown-jr",
       "ballotOrder": {
         "Dallas": 183
       },
@@ -6759,7 +6759,7 @@
       "donations": []
     },
     {
-      "id": "dc-2026-11-129",
+      "id": "2026-11-03-dallas-county-constable-precinct-5-michael-orozco",
       "ballotOrder": {
         "Dallas": 184
       },
@@ -6784,7 +6784,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-001",
+      "id": "2026-11-03-u-s-representative-district-3-keith-self",
       "ballotOrder": {
         "Collin": 4
       },
@@ -6809,7 +6809,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-002",
+      "id": "2026-11-03-u-s-representative-district-3-evan-hunt",
       "ballotOrder": {
         "Collin": 5
       },
@@ -6834,7 +6834,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-003",
+      "id": "2026-11-03-u-s-representative-district-4-pat-fallon",
       "ballotOrder": {
         "Collin": 6
       },
@@ -6859,7 +6859,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-004",
+      "id": "2026-11-03-u-s-representative-district-4-jason-pearce",
       "ballotOrder": {
         "Collin": 7
       },
@@ -6884,7 +6884,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-005",
+      "id": "2026-11-03-state-representative-district-33-katrina-pierson",
       "ballotOrder": {
         "Collin": 50
       },
@@ -6909,7 +6909,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-006",
+      "id": "2026-11-03-state-representative-district-33-orlando-lopez",
       "ballotOrder": {
         "Collin": 51
       },
@@ -6934,7 +6934,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-007",
+      "id": "2026-11-03-state-representative-district-61-keresa-richardson",
       "ballotOrder": {
         "Collin": 52
       },
@@ -6959,7 +6959,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-008",
+      "id": "2026-11-03-state-representative-district-61-brittany-black",
       "ballotOrder": {
         "Collin": 53
       },
@@ -6984,7 +6984,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-009",
+      "id": "2026-11-03-state-representative-district-61-anissa-chilmeran",
       "ballotOrder": {
         "Collin": 54
       },
@@ -7009,7 +7009,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-010",
+      "id": "2026-11-03-state-representative-district-66-matt-shaheen",
       "ballotOrder": {
         "Collin": 55
       },
@@ -7034,7 +7034,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-011",
+      "id": "2026-11-03-state-representative-district-66-sandeep-srivastava",
       "ballotOrder": {
         "Collin": 56
       },
@@ -7059,7 +7059,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-012",
+      "id": "2026-11-03-state-representative-district-67-jeff-leach",
       "ballotOrder": {
         "Collin": 57
       },
@@ -7084,7 +7084,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-013",
+      "id": "2026-11-03-state-representative-district-67-jordan-wheatley",
       "ballotOrder": {
         "Collin": 58
       },
@@ -7109,7 +7109,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-014",
+      "id": "2026-11-03-state-representative-district-70-george-flint",
       "ballotOrder": {
         "Collin": 59
       },
@@ -7134,7 +7134,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-015",
+      "id": "2026-11-03-state-representative-district-70-mihaela-elizabeth-plesa",
       "ballotOrder": {
         "Collin": 60
       },
@@ -7159,7 +7159,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-016",
+      "id": "2026-11-03-state-representative-district-89-candy-noble",
       "ballotOrder": {
         "Collin": 61
       },
@@ -7184,7 +7184,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-017",
+      "id": "2026-11-03-state-representative-district-89-angie-carraway",
       "ballotOrder": {
         "Collin": 62
       },
@@ -7209,7 +7209,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-018",
+      "id": "2026-11-03-collin-district-judge-219th-judicial-district-jennifer-edgeworth",
       "ballotOrder": {
         "Collin": 75
       },
@@ -7231,7 +7231,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-019",
+      "id": "2026-11-03-collin-district-judge-296th-judicial-district-piper-mccraw",
       "ballotOrder": {
         "Collin": 76
       },
@@ -7253,7 +7253,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-020",
+      "id": "2026-11-03-collin-district-judge-366th-judicial-district-tom-nowak",
       "ballotOrder": {
         "Collin": 77
       },
@@ -7275,7 +7275,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-021",
+      "id": "2026-11-03-collin-district-judge-417th-judicial-district-cyndi-mccrann-wheless",
       "ballotOrder": {
         "Collin": 78
       },
@@ -7297,7 +7297,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-022",
+      "id": "2026-11-03-collin-district-judge-429th-judicial-district-jill-willis",
       "ballotOrder": {
         "Collin": 79
       },
@@ -7319,7 +7319,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-023",
+      "id": "2026-11-03-collin-district-judge-471st-judicial-district-bryan-gantt",
       "ballotOrder": {
         "Collin": 80
       },
@@ -7341,7 +7341,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-024",
+      "id": "2026-11-03-collin-district-judge-494th-judicial-district-kathryn-pruitt",
       "ballotOrder": {
         "Collin": 81
       },
@@ -7363,7 +7363,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-025",
+      "id": "2026-11-03-collin-criminal-district-attorney-collin-county-greg-willis",
       "ballotOrder": {
         "Collin": 82
       },
@@ -7385,7 +7385,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-026",
+      "id": "2026-11-03-collin-county-judge-chris-hill",
       "ballotOrder": {
         "Collin": 83
       },
@@ -7407,7 +7407,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-027",
+      "id": "2026-11-03-collin-county-judge-john-r-buster-brown",
       "ballotOrder": {
         "Collin": 84
       },
@@ -7429,7 +7429,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-028",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-1-corinne-mason",
       "ballotOrder": {
         "Collin": 85
       },
@@ -7451,7 +7451,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-029",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-2-barnett-walker",
       "ballotOrder": {
         "Collin": 86
       },
@@ -7473,7 +7473,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-030",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-3-lance-s-baxter",
       "ballotOrder": {
         "Collin": 87
       },
@@ -7495,7 +7495,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-031",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-4-david-rippel",
       "ballotOrder": {
         "Collin": 88
       },
@@ -7517,7 +7517,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-032",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-5-randy-johnson",
       "ballotOrder": {
         "Collin": 89
       },
@@ -7539,7 +7539,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-033",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-6-jay-a-bender",
       "ballotOrder": {
         "Collin": 90
       },
@@ -7561,7 +7561,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-034",
+      "id": "2026-11-03-collin-judge-county-court-at-law-no-7-david-waddill",
       "ballotOrder": {
         "Collin": 91
       },
@@ -7583,7 +7583,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-035",
+      "id": "2026-11-03-collin-probate-court-sarah-r-duff",
       "ballotOrder": {
         "Collin": 92
       },
@@ -7605,7 +7605,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-036",
+      "id": "2026-11-03-collin-district-clerk-mike-gould",
       "ballotOrder": {
         "Collin": 93
       },
@@ -7627,7 +7627,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-037",
+      "id": "2026-11-03-collin-county-clerk-stacey-kemp",
       "ballotOrder": {
         "Collin": 94
       },
@@ -7649,7 +7649,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-038",
+      "id": "2026-11-03-collin-county-clerk-john-russell",
       "ballotOrder": {
         "Collin": 95
       },
@@ -7671,7 +7671,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-039",
+      "id": "2026-11-03-collin-county-commissioner-precinct-2-michael-slaughter",
       "ballotOrder": {
         "Collin": 96
       },
@@ -7696,7 +7696,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-040",
+      "id": "2026-11-03-collin-county-commissioner-precinct-4-shelby-williams",
       "ballotOrder": {
         "Collin": 97
       },
@@ -7721,7 +7721,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-041",
+      "id": "2026-11-03-collin-county-commissioner-precinct-4-julie-holmer",
       "ballotOrder": {
         "Collin": 98
       },
@@ -7746,7 +7746,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-042",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-1-paul-m-raleeh",
       "ballotOrder": {
         "Collin": 99
       },
@@ -7771,7 +7771,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-043",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-2-ellen-kinnebrew",
       "ballotOrder": {
         "Collin": 100
       },
@@ -7796,7 +7796,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-044",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-2-darsell-e-johnson",
       "ballotOrder": {
         "Collin": 101
       },
@@ -7821,7 +7821,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-045",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-3-mike-missildine",
       "ballotOrder": {
         "Collin": 102
       },
@@ -7846,7 +7846,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-046",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-3-irvin-lynn-barrett",
       "ballotOrder": {
         "Collin": 103
       },
@@ -7871,7 +7871,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-047",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-4-stephen-kallas",
       "ballotOrder": {
         "Collin": 104
       },
@@ -7896,7 +7896,7 @@
       "donations": []
     },
     {
-      "id": "cc-2026-11-048",
+      "id": "2026-11-03-collin-justice-of-the-peace-precinct-4-eli-worthy",
       "ballotOrder": {
         "Collin": 105
       },

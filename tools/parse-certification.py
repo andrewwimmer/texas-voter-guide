@@ -40,6 +40,8 @@ import os
 import re
 import sys
 
+import idgen
+
 PARTIES = ('REPUBLICAN', 'DEMOCRATIC', 'LIBERTARIAN', 'GREEN')
 
 HEADER_LINES = ('Texas Secretary of State', 'Ballot Certification Report')
@@ -195,7 +197,7 @@ def classify(race, county):
     return {'name': '%s County' % county, 'type': 'county'}, county, district
 
 
-def build(rows, county, prefix, election_date, source):
+def build(rows, county, election_date, source):
     per_race = {}
     for r, _, _ in rows:
         per_race[r] = per_race.get(r, 0) + 1
@@ -204,7 +206,7 @@ def build(rows, county, prefix, election_date, source):
     for i, (race, name, party) in enumerate(rows, start=1):
         jur, cty, dist = classify(race, county)
         out.append({
-            'id': '%s-%s-%03d' % (prefix, election_date[:7].replace('-', '-'), i),
+            'id': None,                    # filled in by idgen.assign_ids below
             'ballotOrder': {county: i},
             'race': race,
             'jurisdiction': jur,
@@ -218,6 +220,11 @@ def build(rows, county, prefix, election_date, source):
             'endorsements': [],
             'donations': [],
         })
+
+    # Ids come from the record's own content, so they do not depend on which
+    # county was parsed first. See tools/idgen.py.
+    for base, race, cand in idgen.assign_ids(out):
+        print('WARNING: duplicate id %s (%s / %s)' % (base, race, cand))
     return out
 
 
@@ -275,8 +282,6 @@ ap = argparse.ArgumentParser()
 ap.add_argument('path', help='certification PDF, or a .txt of its extracted text')
 ap.add_argument('--county', help='override the county name (required for .txt input '
                                  'if the header line is missing)')
-ap.add_argument('--prefix', help='id prefix, e.g. tc. Default: first letter of the '
-                                 'county + c')
 ap.add_argument('--date', help='election date YYYY-MM-DD (default: computed)')
 ap.add_argument('-o', '--out', help='write records to this JSON file')
 ap.add_argument('--diff', action='store_true', help='compare against candidates.json')
@@ -294,10 +299,9 @@ election_date = args.date or compute_election_date(text)
 if not election_date:
     sys.exit('Could not determine the election date. Pass --date YYYY-MM-DD.')
 
-prefix = args.prefix or (county[0].lower() + 'c')
 source = args.path if args.path.startswith('sources/') else os.path.basename(args.path)
 
-records = build(rows, county, prefix, election_date, source)
+records = build(rows, county, election_date, source)
 
 races = []
 for r, _, _ in rows:
@@ -306,7 +310,6 @@ for r, _, _ in rows:
 
 print('county        : %s' % county)
 print('election date : %s' % election_date)
-print('id prefix     : %s' % prefix)
 print('races         : %d' % len(races))
 print('candidates    : %d' % len(records))
 print('unopposed     : %d' % sum(1 for c in records if c['unopposed']))
