@@ -8,6 +8,12 @@
 
   var DATA_URL = 'candidates.json';
 
+  // Plain-language explanations of what each office does, each carrying links
+  // to the law it summarizes. Supplementary to the ballot, never required by
+  // it: if this file is missing or malformed every race title stays exactly
+  // the text the certification report printed.
+  var OFFICES_URL = 'data/offices.json';
+
   var TYPE_LABELS = {
     'federal': 'Federal',
     'state': 'State',
@@ -41,7 +47,11 @@
     // The race list is not on the page at all until a lookup resolves or the
     // landing panel's browse button is pressed. Filtering and rendering are
     // unaffected — this only decides whether the list is on screen.
-    racesRevealed: false
+    racesRevealed: false,
+    // Office explanations, compiled from data/offices.json. Empty until that
+    // file loads, and left empty if it fails — see OFFICES_URL.
+    offices: [],
+    officeNotes: []
   };
 
   var els = {
@@ -345,6 +355,162 @@
     }
   }
 
+  /* ---------- office explanations ---------- */
+
+  /* offices.json carries a "matches" regular expression per office, tested
+     against the trimmed race title, and an optional "counties" list that
+     narrows it to the counties that actually elect that office. The gate
+     matters because three counties print some identical titles over
+     different offices: "JUDGE, COUNTY COURT AT LAW NO. 1" is a Tarrant
+     office here, and the Dallas and Collin races under that same string are
+     deliberately left unexplained rather than given Tarrant's description.
+
+     Nothing is inferred. A race whose title no pattern matches keeps its
+     title exactly as certified, with no button and no panel. */
+
+  // Patterns are compiled once, at load. A pattern that will not compile
+  // drops that one office rather than throwing: a typo in the data file
+  // should cost its own entry, not the whole ballot.
+  function compileOffices(data) {
+    var offices = [];
+    var notes = [];
+    if (!data || typeof data !== 'object') return { offices: offices, notes: notes };
+
+    function compile(entry) {
+      if (!entry || typeof entry.matches !== 'string') return null;
+      try {
+        return new RegExp(entry.matches);
+      } catch (err) {
+        return null;
+      }
+    }
+
+    if (Array.isArray(data.offices)) {
+      data.offices.forEach(function (o) {
+        var re = compile(o);
+        if (re) offices.push({ entry: o, re: re });
+      });
+    }
+    if (Array.isArray(data.notes)) {
+      data.notes.forEach(function (n) {
+        var re = compile(n);
+        if (re) notes.push({ entry: n, re: re });
+      });
+    }
+    return { offices: offices, notes: notes };
+  }
+
+  // A race object carries the same `county` shape a candidate record does
+  // (null, a string, or a list for a district two counties share), so the
+  // record-level reader works on it unchanged.
+  function officeMatches(race, compiled) {
+    var title = String(race.race || '').trim();
+    if (!compiled.re.test(title)) return false;
+
+    var counties = compiled.entry.counties;
+    if (!Array.isArray(counties) || !counties.length) return true;
+
+    // County-gated: the race has to name one of those counties. A statewide
+    // race names none, so it does not qualify — which is the intent, since
+    // every county-gated office here is a county office.
+    var mine = recordCounties(race);
+    return mine.some(function (name) { return counties.indexOf(name) !== -1; });
+  }
+
+  // First match wins. The data is written so at most one office matches any
+  // title — the report on this pass found no race matching two — but taking
+  // the first keeps a future overlap from rendering two stacked panels.
+  function findOffice(race) {
+    for (var i = 0; i < state.offices.length; i++) {
+      if (officeMatches(race, state.offices[i])) return state.offices[i].entry;
+    }
+    return null;
+  }
+
+  // Notes are cross-cutting facts about a race that are not about the office
+  // itself — "unexpired term" is true of a seat, not of the job — so they are
+  // matched separately and all matches are shown.
+  function findNotes(race) {
+    var title = String(race.race || '').trim();
+    return state.officeNotes
+      .filter(function (n) { return n.re.test(title); })
+      .map(function (n) { return n.entry; });
+  }
+
+  // aria-controls needs an id that is unique on the page. render() rebuilds
+  // the whole list, so a counter that only ever climbs is simpler than
+  // deriving an id from the title — and two counties' same-titled races
+  // cannot collide on it.
+  var officePanelSeq = 0;
+
+  function renderOfficePanel(office, notes, panelId) {
+    var panel = el('div', 'office-panel');
+    panel.id = panelId;
+    panel.hidden = true;
+
+    panel.appendChild(el('p', 'office-desc', office.description || ''));
+
+    notes.forEach(function (note) {
+      if (note.text) panel.appendChild(el('p', 'office-note', note.text));
+    });
+
+    // Links are taken from the data verbatim; safeUrl only refuses anything
+    // that is not http(s), it never rewrites one.
+    var laws = Array.isArray(office.law) ? office.law : [];
+    var links = [];
+    laws.forEach(function (law) {
+      if (!law) return;
+      var url = safeUrl(law.url);
+      if (!url) return;
+      var a = el('a', 'office-law-link', (law.label || url) + ' ↗');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      links.push(a);
+    });
+
+    if (links.length) {
+      var wrap = el('p', 'office-law');
+      wrap.appendChild(el('span', 'office-law-label', 'In law'));
+      links.forEach(function (a) { wrap.appendChild(a); });
+      panel.appendChild(wrap);
+    }
+
+    return panel;
+  }
+
+  // Turns the race title into a disclosure button over its explanation.
+  // Returns null when no office matched, and the caller then renders the
+  // title as the plain heading it has always been.
+  function buildOfficeDisclosure(race) {
+    var office = findOffice(race);
+    if (!office) return null;
+
+    var panelId = 'office-panel-' + (++officePanelSeq);
+    var panel = renderOfficePanel(office, findNotes(race), panelId);
+
+    var btn = el('button', 'office-toggle');
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', panelId);
+    btn.appendChild(el('span', 'office-toggle-text', race.race));
+    // The marker is decorative: the button's name is the race title, and
+    // aria-expanded already says which way it is pointing.
+    var icon = el('span', 'office-toggle-icon', '?');
+    icon.setAttribute('aria-hidden', 'true');
+    btn.appendChild(icon);
+
+    // Tap, not hover: a touch screen has no hover, and on a pointer device an
+    // explanation that appears on the way past is noise over a long list.
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      panel.hidden = open;
+    });
+
+    return { button: btn, panel: panel };
+  }
+
   /* ---------- rendering ---------- */
 
   function renderSourceLink(item) {
@@ -462,7 +628,18 @@
 
     var box = el('article', 'race' + (partyMatches === 0 ? ' race-unmatched' : ''));
     var head = el('div', 'race-head');
-    head.appendChild(el('h3', null, race.race));
+
+    // The heading is the same <h3> either way — only its contents change, so
+    // the document outline does not depend on whether an explanation exists.
+    var heading = el('h3', null);
+    var disclosure = buildOfficeDisclosure(race);
+    if (disclosure) {
+      heading.appendChild(disclosure.button);
+    } else {
+      heading.textContent = race.race;
+    }
+    head.appendChild(heading);
+
     if (race.electionDate) {
       head.appendChild(el('span', 'election-date', 'Election: ' + formatDate(race.electionDate)));
     }
@@ -470,6 +647,9 @@
       head.appendChild(el('span', 'race-note',
         'No ' + partyLabel(state.party) + ' candidate in this race'));
     }
+    // Last in the head, so the panel opens under the whole title line —
+    // title, election date and party note — and above the candidates.
+    if (disclosure) head.appendChild(disclosure.panel);
     box.appendChild(head);
     race.candidates.forEach(function (c) { box.appendChild(renderCandidate(c)); });
     return box;
@@ -1445,12 +1625,30 @@
 
   setStatus('Loading candidates…');
 
-  fetch(DATA_URL, { cache: 'no-cache' })
-    .then(function (res) {
+  // Offices ride alongside the candidates rather than after them: the two are
+  // independent files and the list is rendered once, with explanations
+  // already in hand, instead of being built plain and then re-rendered.
+  //
+  // Its failure is not the ballot's failure. A missing or broken offices.json
+  // resolves to null here, every title renders as plain text, and the guide
+  // is exactly the guide it was before this file existed.
+  var officesReady = fetch(OFFICES_URL, { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .catch(function () { return null; });
+
+  Promise.all([
+    fetch(DATA_URL, { cache: 'no-cache' }).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status + ' fetching ' + DATA_URL);
       return res.json();
+    }),
+    officesReady
+  ])
+    .then(function (both) {
+      var compiled = compileOffices(both[1]);
+      state.offices = compiled.offices;
+      state.officeNotes = compiled.notes;
+      start(both[0]);
     })
-    .then(start)
     .catch(function (err) {
       var hint = location.protocol === 'file:'
         ? ' Opening this page directly from disk blocks the fetch. Serve the folder over HTTP instead, e.g. "python3 -m http.server".'

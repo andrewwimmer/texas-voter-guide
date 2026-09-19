@@ -1,0 +1,573 @@
+{
+  "version": 1,
+  "note": "Office explanations. Descriptions are plain-language summaries; each links to the law it is based on. status 'checked' = looked up against the linked source on 2026-09-19; 'standard' = well-established, spot-check before publishing.",
+  "offices": [
+    {
+      "id": "us-senator",
+      "title": "U.S. Senator",
+      "matches": "^U\\. ?S\\. SENATOR$",
+      "counties": null,
+      "description": "One of Texas's two U.S. senators, elected for six years. Votes on federal laws and approves or rejects the President's nominees for federal judges and cabinet posts.",
+      "law": [
+        {
+          "label": "U.S. Constitution Art. 1 \u00a73",
+          "url": "https://constitution.congress.gov/browse/article-1/section-3/"
+        },
+        {
+          "label": "U.S. Constitution Art. 2 \u00a72",
+          "url": "https://constitution.congress.gov/browse/article-2/section-2/"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "us-representative",
+      "title": "U.S. Representative",
+      "matches": "^U\\. ?S\\. REPRESENTATIVE DISTRICT \\d+$",
+      "counties": null,
+      "description": "Represents one congressional district in the U.S. House for two years. Votes on federal laws, and bills to raise revenue must start in the House.",
+      "law": [
+        {
+          "label": "U.S. Constitution Art. 1 \u00a72",
+          "url": "https://constitution.congress.gov/browse/article-1/section-2/"
+        },
+        {
+          "label": "U.S. Constitution Art. 1 \u00a77",
+          "url": "https://constitution.congress.gov/browse/article-1/section-7/"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "governor",
+      "title": "Governor",
+      "matches": "^GOVERNOR$",
+      "counties": null,
+      "description": "The state's chief executive, elected for four years. Signs or vetoes bills, can call the Legislature into special session, and fills most vacancies in state and district offices.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a78",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.8"
+        },
+        {
+          "label": "Tex. Const. Art. IV \u00a712",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.12"
+        },
+        {
+          "label": "Tex. Const. Art. IV \u00a714",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.14"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "lieutenant-governor",
+      "title": "Lieutenant Governor",
+      "matches": "^LIEUTENANT GOVERNOR$",
+      "counties": null,
+      "description": "Presides over the Texas Senate and is elected separately from the Governor, for four years. Takes over as governor if that office becomes vacant.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a716",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.16"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "attorney-general",
+      "title": "Attorney General",
+      "matches": "^ATTORNEY GENERAL$",
+      "counties": null,
+      "description": "The state's lawyer. Represents Texas in court, issues legal opinions to government officials, and enforces child-support and consumer-protection laws.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a722",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.22"
+        },
+        {
+          "label": "Government Code ch. 402",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.402.htm"
+        },
+        {
+          "label": "Family Code \u00a7231.001",
+          "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.231.htm#231.001"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "comptroller",
+      "title": "Comptroller of Public Accounts",
+      "matches": "^COMPTROLLER OF PUBLIC ACCOUNTS$",
+      "counties": null,
+      "description": "The state's chief tax collector and accountant. Certifies how much revenue the state expects, and the Legislature can't pass a budget that spends more without a four-fifths vote.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a723",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.23"
+        },
+        {
+          "label": "Tex. Const. Art. III \u00a749a",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.49a"
+        },
+        {
+          "label": "Government Code ch. 403",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.403.htm"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "land-commissioner",
+      "title": "Commissioner of the General Land Office",
+      "matches": "^COMMISSIONER OF THE GENERAL LAND OFFICE$",
+      "counties": null,
+      "description": "Manages the state's public lands and the mineral rights on them. Much of the income goes to the Permanent School Fund, which supports public schools.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a723",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.23"
+        },
+        {
+          "label": "Tex. Const. Art. VII \u00a72",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.7.htm#7.2"
+        },
+        {
+          "label": "Natural Resources Code ch. 31",
+          "url": "https://statutes.capitol.texas.gov/Docs/NR/htm/NR.31.htm"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "agriculture-commissioner",
+      "title": "Commissioner of Agriculture",
+      "matches": "^COMMISSIONER OF AGRICULTURE$",
+      "counties": null,
+      "description": "Heads the Texas Department of Agriculture, which among other duties regulates pesticide use and inspects gas pumps and store scales.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. IV \u00a723",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.23"
+        },
+        {
+          "label": "Agriculture Code ch. 12",
+          "url": "https://statutes.capitol.texas.gov/Docs/AG/htm/AG.12.htm"
+        },
+        {
+          "label": "Agriculture Code ch. 13",
+          "url": "https://statutes.capitol.texas.gov/Docs/AG/htm/AG.13.htm"
+        },
+        {
+          "label": "Agriculture Code ch. 76",
+          "url": "https://statutes.capitol.texas.gov/Docs/AG/htm/AG.76.htm"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "railroad-commissioner",
+      "title": "Railroad Commissioner",
+      "matches": "^RAILROAD COMMISSIONER$",
+      "counties": null,
+      "description": "One of three commissioners, each elected for six years, who regulate the oil and gas industry, gas utilities, and pipeline safety. Despite the name, it no longer oversees railroads.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. XVI \u00a730",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.16.htm#16.30"
+        },
+        {
+          "label": "Natural Resources Code ch. 81",
+          "url": "https://statutes.capitol.texas.gov/Docs/NR/htm/NR.81.htm"
+        },
+        {
+          "label": "Railroad Commission: \"What, No Railroads?\"",
+          "url": "https://www.rrc.texas.gov/about-us/faqs/railroads"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "state-senator",
+      "title": "State Senator",
+      "matches": "^STATE SENATOR, DISTRICT \\d+$",
+      "counties": null,
+      "description": "One of 31 senators who write and vote on state laws and the state budget, serving four-year terms. The Senate also confirms the Governor's appointments.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. III \u00a72",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.2"
+        },
+        {
+          "label": "Tex. Const. Art. III \u00a73",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.3"
+        },
+        {
+          "label": "Tex. Const. Art. IV \u00a712",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.4.htm#4.12"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "state-representative",
+      "title": "State Representative",
+      "matches": "^STATE REPRESENTATIVE DISTRICT \\d+$",
+      "counties": null,
+      "description": "One of 150 House members who write and vote on state laws and the state budget, serving two-year terms. Bills to raise revenue must start in the House.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. III \u00a72",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.2"
+        },
+        {
+          "label": "Tex. Const. Art. III \u00a74",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.4"
+        },
+        {
+          "label": "Tex. Const. Art. III \u00a733",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.33"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "sboe",
+      "title": "State Board of Education",
+      "matches": "^MEMBER, STATE BOARD OF EDUCATION, DISTRICT \\d+$",
+      "counties": null,
+      "description": "One of 15 members who set curriculum standards for Texas public schools, approve instructional materials, and oversee investment of the Permanent School Fund.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. VII \u00a78",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.7.htm#7.8"
+        },
+        {
+          "label": "Education Code \u00a77.102",
+          "url": "https://statutes.capitol.texas.gov/Docs/ED/htm/ED.7.htm#7.102"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "supreme-court",
+      "title": "Supreme Court of Texas",
+      "matches": "^(CHIEF JUSTICE, SUPREME COURT|JUSTICE, SUPREME COURT, PLACE \\d+)",
+      "counties": null,
+      "description": "Texas's highest court for civil cases, such as lawsuits, family law, and business disputes. It does not hear criminal appeals.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a72",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.2"
+        },
+        {
+          "label": "Tex. Const. Art. V \u00a73",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.3"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "court-of-criminal-appeals",
+      "title": "Court of Criminal Appeals",
+      "matches": "^JUDGE, COURT OF CRIMINAL APPEALS, PLACE \\d+",
+      "counties": null,
+      "description": "Texas's highest court for criminal cases, including automatic review of every death sentence.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a74",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.4"
+        },
+        {
+          "label": "Tex. Const. Art. V \u00a75",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.5"
+        },
+        {
+          "label": "Code of Criminal Procedure \u00a737.071",
+          "url": "https://statutes.capitol.texas.gov/Docs/CR/htm/CR.37.htm#37.071"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "15th-court-of-appeals",
+      "title": "15th Court of Appeals",
+      "matches": "^(CHIEF JUSTICE, 15TH COURT OF APPEALS DISTRICT|JUSTICE, 15TH COURT OF APPEALS DISTRICT, PLACE \\d+)",
+      "counties": null,
+      "description": "A statewide appeals court, created in 2023, that hears civil appeals in cases brought by or against state government agencies and officials.",
+      "law": [
+        {
+          "label": "Government Code \u00a722.220",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.22.htm#22.220"
+        },
+        {
+          "label": "Texas Judicial Branch: Fifteenth Court of Appeals",
+          "url": "https://www.txcourts.gov/14thcoa/news/fifteenth-court-of-appeals/"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "2nd-court-of-appeals",
+      "title": "2nd Court of Appeals",
+      "matches": "^(CHIEF JUSTICE, 2ND COURT OF APPEALS DISTRICT|JUSTICE, 2ND COURT OF APPEALS DISTRICT, PLACE \\d+)",
+      "counties": null,
+      "description": "An appeals court based in Fort Worth that reviews civil and criminal cases from trial courts in 12 North Texas counties, including Tarrant. Death penalty cases skip this court and go straight to the Court of Criminal Appeals.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a76",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.6"
+        },
+        {
+          "label": "Government Code \u00a722.201",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.22.htm#22.201"
+        },
+        {
+          "label": "Second Court of Appeals",
+          "url": "https://www.txcourts.gov/2ndcoa/"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "district-judge",
+      "title": "District Judge",
+      "matches": "^DISTRICT JUDGE, \\d+(ST|ND|RD|TH) JUDICIAL DISTRICT",
+      "counties": null,
+      "description": "The main trial court in Texas, handling felony criminal cases, divorce and custody cases, and larger civil lawsuits. In large counties, individual district courts often focus on one type of case.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a78",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.8"
+        },
+        {
+          "label": "Government Code ch. 24",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.24.htm"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "criminal-district-judge-tarrant",
+      "title": "Criminal District Judge (Tarrant)",
+      "matches": "^CRIMINAL DISTRICT JUDGE #\\d+ TARRANT COUNTY",
+      "counties": [
+        "Tarrant"
+      ],
+      "description": "A district-level trial court in Tarrant County that hears criminal cases, including felonies.",
+      "law": [
+        {
+          "label": "Government Code \u00a724.910",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.24.htm#24.910"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "county-court-at-law-tarrant",
+      "title": "County Court at Law (Tarrant)",
+      "matches": "^JUDGE, COUNTY COURT AT LAW NO\\. \\d+",
+      "counties": [
+        "Tarrant"
+      ],
+      "description": "A county-level trial court. In Tarrant County these courts hear civil cases, including lawsuits up to $200,000 and appeals from justice courts.",
+      "law": [
+        {
+          "label": "Government Code \u00a725.2222",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.25.htm#25.2222"
+        },
+        {
+          "label": "Tarrant County: County Court at Law No. 2",
+          "url": "https://www.tarrantcountytx.gov/content/main/en/civil-courts/county-courts/county-court-at-law-2.html"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "county-criminal-court-tarrant",
+      "title": "County Criminal Court (Tarrant)",
+      "matches": "^JUDGE, COUNTY CRIMINAL COURT NO\\. \\d+",
+      "counties": [
+        "Tarrant"
+      ],
+      "description": "Hears misdemeanor criminal cases, the less serious offenses that can still carry jail time. These courts do not hear civil cases.",
+      "law": [
+        {
+          "label": "Government Code \u00a725.2223",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.25.htm#25.2223"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "probate-court",
+      "title": "Probate Court",
+      "matches": "^JUDGE, PROBATE COURT NO\\. \\d+",
+      "counties": null,
+      "description": "Handles wills, the estates of people who have died, and guardianships for people who can't manage their own affairs.",
+      "law": [
+        {
+          "label": "Estates Code ch. 32",
+          "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.32.htm"
+        },
+        {
+          "label": "Estates Code ch. 1022",
+          "url": "https://statutes.capitol.texas.gov/Docs/ES/htm/ES.1022.htm"
+        },
+        {
+          "label": "Government Code \u00a725.0021",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.25.htm#25.0021"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "justice-of-the-peace",
+      "title": "Justice of the Peace",
+      "matches": "^JUSTICE OF THE PEACE PRECINCT \\d+",
+      "counties": null,
+      "description": "The county's lowest-level court, handling small claims up to $20,000, evictions, and fine-only offenses like traffic tickets.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a719",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.19"
+        },
+        {
+          "label": "Government Code \u00a727.031",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.27.htm#27.031"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "criminal-district-attorney-tarrant",
+      "title": "Criminal District Attorney (Tarrant)",
+      "matches": "^CRIMINAL DISTRICT ATTORNEY TARRANT COUNTY$",
+      "counties": [
+        "Tarrant"
+      ],
+      "description": "Tarrant County's chief prosecutor, representing the state in criminal cases in the county's courts. The office also represents Tarrant County itself in court.",
+      "law": [
+        {
+          "label": "Government Code \u00a744.320",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.44.htm#44.320"
+        },
+        {
+          "label": "Tarrant County DA: Civil Division",
+          "url": "https://www.tarrantcountytx.gov/en/criminal-district-attorney/civil-division.html"
+        }
+      ],
+      "status": "checked"
+    },
+    {
+      "id": "county-judge",
+      "title": "County Judge",
+      "matches": "^COUNTY JUDGE$",
+      "counties": null,
+      "description": "Presides over the Commissioners Court, the county's governing body, and serves as the county's emergency management director.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a715",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.15"
+        },
+        {
+          "label": "Tex. Const. Art. V \u00a718",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.18"
+        },
+        {
+          "label": "Government Code \u00a7418.1015",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.418.htm#418.1015"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "county-commissioner",
+      "title": "County Commissioner",
+      "matches": "^COUNTY COMMISSIONER PRECINCT \\d+$",
+      "counties": null,
+      "description": "One of four commissioners who, with the County Judge, make up the Commissioners Court, which sets the county budget and tax rate. Each is elected from one of four precincts.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a718",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.18"
+        },
+        {
+          "label": "Tax Code \u00a726.05",
+          "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.26.htm#26.05"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "district-clerk",
+      "title": "District Clerk",
+      "matches": "^DISTRICT CLERK$",
+      "counties": null,
+      "description": "Keeps the official records and case files for the district courts.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a79",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.9"
+        },
+        {
+          "label": "Government Code \u00a751.303",
+          "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.51.htm#51.303"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "county-clerk",
+      "title": "County Clerk",
+      "matches": "^COUNTY CLERK$",
+      "counties": null,
+      "description": "Records property deeds and issues marriage licenses, and keeps the records for the county-level courts.",
+      "law": [
+        {
+          "label": "Tex. Const. Art. V \u00a720",
+          "url": "https://statutes.capitol.texas.gov/Docs/CN/htm/CN.5.htm#5.20"
+        },
+        {
+          "label": "Local Government Code ch. 193",
+          "url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.193.htm"
+        },
+        {
+          "label": "Family Code \u00a72.001",
+          "url": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.2.htm#2.001"
+        }
+      ],
+      "status": "standard"
+    },
+    {
+      "id": "appraisal-district-board",
+      "title": "Appraisal District Board",
+      "matches": "APPRAISAL DISTRICT",
+      "counties": null,
+      "description": "One of three elected members of the nine-member board that governs the county appraisal district, which values property for tax purposes. Elected members serve four-year terms, and the board hires the chief appraiser and adopts the district's budget.",
+      "law": [
+        {
+          "label": "Tax Code \u00a76.0301",
+          "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.6.htm#6.0301"
+        },
+        {
+          "label": "Tax Code \u00a76.05",
+          "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.6.htm#6.05"
+        },
+        {
+          "label": "Texas Secretary of State: Appraisal district elections",
+          "url": "https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml"
+        }
+      ],
+      "status": "checked"
+    }
+  ],
+  "notes": [
+    {
+      "id": "unexpired-term",
+      "matches": "UNEXPIRED TERM",
+      "text": "This seat is being filled for the rest of a term left vacant, so the winner serves less than a full term."
+    }
+  ]
+}

@@ -1318,6 +1318,125 @@ a:hover { color: var(--red-dark); }
   letter-spacing: 0.08em;
 }
 
+/* ---------- Office explanations ---------- */
+
+/* A race title that has an explanation behind it is still, first, the race
+   title: same size, same weight, same color as one that does not. The button
+   is stripped back to the heading it replaced, and the only thing marking it
+   is the glyph at the end. Titles that match no office stay plain <h3> text,
+   so the two sit side by side in a list without the explained ones reading
+   as more important. */
+.office-toggle {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.office-toggle-text {
+  text-decoration: underline dotted var(--line-strong);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.office-toggle:hover .office-toggle-text {
+  text-decoration-color: var(--red);
+}
+
+/* Sized and spaced as its own tap target rather than as punctuation: on a
+   phone the whole title line is tappable, but the glyph is what says so. */
+.office-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background: var(--surface-sunk);
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 0.68em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: 0.18em;
+}
+
+.office-toggle:hover .office-toggle-icon {
+  background: var(--red-soft);
+  border-color: var(--red-line);
+  color: var(--red-dark);
+}
+
+.office-toggle[aria-expanded="true"] .office-toggle-icon {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+/* Full width of the race card, below the whole title line. Sunk rather than
+   raised: this is a footnote to the race, not a second card inside it.
+   No display of its own, so [hidden] keeps working. */
+.office-panel {
+  flex: 0 0 100%;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--red-line);
+  background: var(--surface-sunk);
+}
+
+.office-desc {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* A fact about this particular seat, not about the office — set apart from
+   the description so the two are not read as one sentence. */
+.office-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.office-law {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 10px 0 0;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+
+.office-law-label {
+  color: var(--faint);
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* The longest label here runs past 50 characters, which is wider than a
+   phone's content column: the link wraps inside itself rather than pushing
+   the panel into a horizontal scroll. */
+.office-law-link {
+  min-width: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
 /* ---------- Candidate rows ---------- */
 
 /* Rules go between rows, not above the first one. Sibling-matched rather
@@ -1960,6 +2079,21 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
 
   /* One election, printed once in the header. */
   .election-date { display: none !important; }
+
+  /* On paper the title is a title again — there is nothing to tap, so the
+     disclosure marker goes and the button prints as the heading text it
+     holds. An explanation the reader opened before printing is not carried
+     onto the sheet: this is a ballot to vote from, and a page of them is
+     already two sheets without the footnotes. */
+  .office-toggle-icon { display: none !important; }
+  .office-panel { display: none !important; }
+
+  .office-toggle {
+    font: inherit;
+    color: inherit;
+  }
+
+  .office-toggle-text { text-decoration: none; }
 
   /* The absence of a pick is the whole reason this race is still on the sheet,
      so the note takes the slot the candidate's name would have occupied:
