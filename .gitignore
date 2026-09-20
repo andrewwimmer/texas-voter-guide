@@ -7,3 +7,6 @@ data/tx-*-districts.geojson
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Files Claude (Cowork) saves for download, not part of the site
+Claude outputs/
