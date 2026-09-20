@@ -181,10 +181,30 @@
     return PARTY_LABELS[key] || key;
   }
 
+  // No party at all, which on this ballot means the office is nonpartisan by
+  // law rather than a partisan seat nobody filed for. The distinction drives
+  // everything below: a nonpartisan candidate is not "from another party", so
+  // a party selection must not dim them, must not count their race as a race
+  // the party left uncontested, and must not drop them from the printed slate.
+  function isNonpartisan(c) {
+    return partyKey(c) === '';
+  }
+
   // Deliberately NOT part of applyFilters: a party selection dims candidates,
   // it never drops them, so every race keeps its whole field on screen.
   function matchesParty(c) {
     return state.party === 'all' || partyKey(c) === state.party;
+  }
+
+  // How many of a race's candidates are from the selected party, or null when
+  // the question does not apply — no party selected, or a nonpartisan race,
+  // where there is no party to be missing. null is what keeps a nonpartisan
+  // race out of both the "no X candidate" flag and the unmatched-race tally;
+  // 0 means a partisan race the selected party genuinely is not contesting.
+  function partyMatchCount(race) {
+    if (state.party === 'all') return null;
+    var partisan = race.candidates.filter(function (c) { return !isNonpartisan(c); });
+    return partisan.length ? partisan.filter(matchesParty).length : null;
   }
 
   function applyFilters() {
@@ -583,11 +603,22 @@
     return chip;
   }
 
+  // Stands where a party chip would go, for an office that has no party to
+  // name. Deliberately takes the chip's shape but neither its color nor its
+  // glyph: those encode which party, and there is no which here.
+  function renderNonpartisanLabel() {
+    return el('span', 'party party-nonpartisan', 'Nonpartisan');
+  }
+
   // Collapsed to one line by default: name, party, unopposed. The row only
   // becomes expandable where there is sourced detail behind it — a disclosure
   // arrow that opens onto nothing is worse than no arrow.
   function renderCandidate(c) {
-    var selecting = state.party !== 'all';
+    // A nonpartisan candidate is neither highlighted nor dimmed: there is no
+    // party for them to be on the wrong side of, and a dimmed name would read
+    // as "not your party" rather than "no party at all". This is also what
+    // keeps them on the printed slate, where .candidate-dim is display:none.
+    var selecting = state.party !== 'all' && !isNonpartisan(c);
     var hit = selecting && matchesParty(c);
     var classes = 'candidate' +
       (selecting ? (hit ? ' candidate-match' : ' candidate-dim') : '');
@@ -601,7 +632,9 @@
     var row = el(sections.length ? 'summary' : 'div', 'candidate-row');
 
     row.appendChild(el('span', 'candidate-name', c.candidate || 'Unnamed candidate'));
-    if (c.party) row.appendChild(renderPartyChip(c.party));
+    row.appendChild(isNonpartisan(c)
+      ? renderNonpartisanLabel()
+      : renderPartyChip(c.party));
     if (c.unopposed) row.appendChild(el('span', 'marker-unopposed', 'Unopposed'));
     box.appendChild(row);
 
@@ -621,10 +654,10 @@
   function renderRace(race) {
     // A race with nobody from the selected party still belongs on the page —
     // that absence is itself something the reader needs to see — so it stays,
-    // flagged, rather than disappearing.
-    var partyMatches = state.party === 'all'
-      ? null
-      : race.candidates.filter(matchesParty).length;
+    // flagged, rather than disappearing. A nonpartisan race comes back null
+    // instead of 0 and is never flagged: no party contests it by law, which
+    // is not the same absence and must not be reported as one.
+    var partyMatches = partyMatchCount(race);
 
     var box = el('article', 'race' + (partyMatches === 0 ? ' race-unmatched' : ''));
     var head = el('div', 'race-head');
@@ -787,7 +820,10 @@
     var partyEmptyRaces = 0;
     if (state.party !== 'all') {
       races.forEach(function (r) {
-        var n = r.candidates.filter(matchesParty).length;
+        // null is a nonpartisan race: it contributes to neither tally, so the
+        // note never reports it as a race the selected party sat out.
+        var n = partyMatchCount(r);
+        if (n === null) return;
         partyMatched += n;
         if (!n) partyEmptyRaces++;
       });

@@ -1556,6 +1556,16 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
+/* Nonpartisan office: no party, so no hue and no glyph — the one chip in the
+   row that is deliberately not color-coded, because a color here would read as
+   a fifth party. Restates the neutral ground explicitly rather than leaning on
+   .party's default, and takes back the left padding the missing glyph held. */
+.party-nonpartisan {
+  padding-left: 10px;
+  background: var(--surface-sunk);
+  color: var(--muted);
+}
+
 /* ---------- Unopposed ---------- */
 
 .marker-unopposed {

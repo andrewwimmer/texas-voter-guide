@@ -1,13 +1,16 @@
 {
   "meta": {
     "title": "Tarrant, Dallas, and Collin County Voter Guide",
-    "note": "Race names, candidate names, and party labels are transcribed from the Texas Secretary of State Ballot Certification Reports for the November 3, 2026 general election in Tarrant County (sources/ballot-certification-2026-11-03.pdf), Dallas County (sources/ballot-certification-dallas-2026-11-03.pdf), and Collin County (sources/ballot-certification-collin-2026-11-03.pdf). Endorsement and donation data has not been collected yet; those arrays are empty for every candidate. Each entry carries a ballotOrder keyed by county name: its 1-based position in that county's certification report, which is the order the races and the candidates within each race appear on that county's printed ballot. A statewide or shared-district race certified by more than one county is a single record carrying a position for each. A race title more than one county uses for different offices - COUNTY JUDGE, DISTRICT CLERK, COUNTY COMMISSIONER PRECINCT 2 - is separate records per county, told apart by the county field.",
+    "note": "Race names, candidate names, and party labels are transcribed from the Texas Secretary of State Ballot Certification Reports for the November 3, 2026 general election in Tarrant County (sources/ballot-certification-2026-11-03.pdf), Dallas County (sources/ballot-certification-dallas-2026-11-03.pdf), and Collin County (sources/ballot-certification-collin-2026-11-03.pdf). The Tarrant Appraisal District board races are the exception: they are not on any certification report, and are taken from the Tarrant County Elections qualified-candidate list (sources/tad-candidates-2026-11-03.pdf), the ballot order drawn by TAD on August 25, 2026 (sources/tad-ballot-drawing-2026-11-03.pdf), and the county sample ballot (https://gisit.tarrantcounty.com/TCVL/) for the spelling of each name as printed. Party is null on those records because the office is nonpartisan by law and no source prints a party for it; null means nonpartisan, never party unknown. Endorsement and donation data has not been collected yet; those arrays are empty for every candidate. Each entry carries a ballotOrder keyed by county name: its 1-based position in that county's certification report, which is the order the races and the candidates within each race appear on that county's printed ballot. A statewide or shared-district race certified by more than one county is a single record carrying a position for each. A race title more than one county uses for different offices - COUNTY JUDGE, DISTRICT CLERK, COUNTY COMMISSIONER PRECINCT 2 - is separate records per county, told apart by the county field.",
     "sources": [
       "sources/ballot-certification-2026-11-03.pdf",
       "sources/ballot-certification-dallas-2026-11-03.pdf",
-      "sources/ballot-certification-collin-2026-11-03.pdf"
+      "sources/ballot-certification-collin-2026-11-03.pdf",
+      "sources/tad-candidates-2026-11-03.pdf",
+      "sources/tad-ballot-drawing-2026-11-03.pdf",
+      "https://gisit.tarrantcounty.com/TCVL/"
     ],
-    "lastUpdated": "2026-09-11"
+    "lastUpdated": "2026-09-19"
   },
   "candidates": [
     {
@@ -7916,6 +7919,246 @@
       "unopposed": false,
       "sources": [
         "sources/ballot-certification-collin-2026-11-03.pdf"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-1-rebecca-hardy",
+      "ballotOrder": {
+        "Tarrant": 154
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 1",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "REBECCA HARDY",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-1-byron-haynes",
+      "ballotOrder": {
+        "Tarrant": 155
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 1",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "BYRON HAYNES",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-1-phyllis-durbin-grissom",
+      "ballotOrder": {
+        "Tarrant": 156
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 1",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "PHYLLIS DURBIN GRISSOM",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-1-sayeda-bilquees-syed",
+      "ballotOrder": {
+        "Tarrant": 157
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 1",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "SAYEDA BILQUEES SYED",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-2-ambika-sharma",
+      "ballotOrder": {
+        "Tarrant": 158
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 2",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "AMBIKA SHARMA",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-2-cary-cheshire",
+      "ballotOrder": {
+        "Tarrant": 159
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 2",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "CARY CHESHIRE",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-2-paul-stockard",
+      "ballotOrder": {
+        "Tarrant": 160
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 2",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "PAUL STOCKARD",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-2-marshall-hobbs",
+      "ballotOrder": {
+        "Tarrant": 161
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 2",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "MARSHALL HOBBS",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-3-john-adams",
+      "ballotOrder": {
+        "Tarrant": 162
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 3",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "JOHN ADAMS",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-tarrant-appraisal-district-board-of-directors-at-large-place-3-matt-bryant",
+      "ballotOrder": {
+        "Tarrant": 163
+      },
+      "race": "TARRANT APPRAISAL DISTRICT BOARD OF DIRECTORS - AT-LARGE PLACE 3",
+      "jurisdiction": {
+        "name": "Tarrant Appraisal District",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": null,
+      "electionDate": "2026-11-03",
+      "candidate": "MATT BRYANT",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "sources/tad-candidates-2026-11-03.pdf",
+        "sources/tad-ballot-drawing-2026-11-03.pdf",
+        "https://gisit.tarrantcounty.com/TCVL/"
       ],
       "endorsements": [],
       "donations": []

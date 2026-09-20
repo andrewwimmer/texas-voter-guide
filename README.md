@@ -7,9 +7,11 @@ with the Order control. Every endorsement and donation shows a clickable link to
 its source. An address lookup narrows the page to the races a given address
 actually votes in.
 
-Candidate data is extracted from `sources/ballot-certification-2026-11-03.pdf`,
-the Texas Secretary of State's certified ballot report for the November 3, 2026
-general election in Tarrant County, retrieved September 7, 2026.
+Candidate data is extracted from the Texas Secretary of State's certified ballot
+reports for the November 3, 2026 general election in Tarrant, Dallas, and Collin
+counties, plus Tarrant Appraisal District sources for the TAD board races, which
+appear on no certification report. Every source is listed, with a link to the
+record it came from, on the site's Sources page (`sources.html`).
 
 > **⚠️ Endorsement and donation data is not populated yet.** Race names,
 > candidate names, and party labels in `candidates.json` are real, but the
@@ -141,7 +143,13 @@ Field notes:
     county (the 5th Court of Appeals covers Dallas and Collin). Order doesn't
     matter; the code sorts it.
 - `party` is the party name exactly as printed on the certification report:
-  `REPUBLICAN`, `DEMOCRATIC`, `LIBERTARIAN`, or `GREEN`.
+  `REPUBLICAN`, `DEMOCRATIC`, `LIBERTARIAN`, or `GREEN` — or `null` for an
+  office that is nonpartisan by law, where no source prints a party because
+  there is none to print. Appraisal district board seats are the only such
+  races today. `null` is not "party unknown": a nonpartisan candidate is
+  never dimmed by a party selection, never makes their race count as one the
+  selected party left uncontested, and is never dropped from the printed
+  slate. The site labels them "Nonpartisan" where a party chip would go.
 - `unopposed` is `true` when the race has only one certified candidate.
 - `sources` is an array of the records the candidate entry was extracted from,
   one entry per record. It is an array so an entry assembled from more than one
