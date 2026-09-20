@@ -1,4 +1,4 @@
-/* Texas Voter Guide — vanilla JS, no dependencies.
+/* Lone Star Voter Guide — vanilla JS, no dependencies.
    Reads candidates.json, lists races in certified ballot order (or grouped by
    jurisdiction), and renders every endorsement and donation with a clickable
    source link. */
@@ -761,7 +761,7 @@
     var county = printCounty();
     header.innerHTML = '';
     header.appendChild(el('p', 'print-title',
-      'Texas Voter Guide' + (county ? ' \u2014 ' + county + ' County' : '')));
+      'Lone Star Voter Guide' + (county ? ' \u2014 ' + county + ' County' : '')));
 
     // A slate sheet carries one name per race, so it has to say out loud whose
     // slate it is. Without this line the paper reads as the whole field.
@@ -789,7 +789,7 @@
   function renderPrintFooter() {
     els.printFooter.textContent = state.party === 'all' ? '' :
       'Not every race has a candidate from your selected party. ' +
-      'Check the full guide at redvoterguides.org.';
+      'Check the full guide at lonestarvoterguide.org.';
   }
 
   // The first load deliberately shows no races: the landing panel stands in

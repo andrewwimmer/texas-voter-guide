@@ -1,0 +1,5 @@
+lonestarvoterguide.org.      300  IN  A      185.199.108.153
+lonestarvoterguide.org.      300  IN  A      185.199.109.153
+lonestarvoterguide.org.      300  IN  A      185.199.110.153
+lonestarvoterguide.org.      300  IN  A      185.199.111.153
+www.lonestarvoterguide.org.  300  IN  CNAME  andrewwimmer.github.io.

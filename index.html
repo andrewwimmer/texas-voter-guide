@@ -3,21 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Texas Voter Guide</title>
+<title>Lone Star Voter Guide</title>
 <meta name="description" content="A static voter guide for Texas: races, candidates, endorsements, and donations, each with a source link. Tarrant, Dallas, and Collin counties are covered so far; more are on the way.">
-<meta name="theme-color" content="#8a1518">
+<meta name="theme-color" content="#002868">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Zilla+Slab:wght@600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="wrap">
+  <div class="hoist">
     <div class="masthead">
-      <p class="eyebrow">Texas &mdash; 2026 general election</p>
+      <a class="brand" href="index.html">
+        <svg class="brand-star" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M50 6 L60.3 37.6 L93.5 37.6 L66.6 57.2 L76.9 88.8 L50 69.3 L23.1 88.8 L33.4 57.2 L6.5 37.6 L39.7 37.6 Z"/></svg>
+        <span class="brand-name">Lone Star Voter Guide<small>Texas &middot; Nov 3, 2026</small></span>
+      </a>
       <button type="button" class="nav-toggle" id="nav-toggle"
         aria-expanded="false" aria-controls="site-nav">
         <span class="nav-bars" aria-hidden="true"></span>
@@ -33,44 +36,47 @@
       </ul>
     </nav>
 
-    <h1>Texas Voter Guide</h1>
-    <p class="mission">A guide to Texas ballots in which every candidate, endorsement, and donation is tied to a public record you can open and read yourself.</p>
+    <svg class="hoist-star" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" d="M50 6 L60.3 37.6 L93.5 37.6 L66.6 57.2 L76.9 88.8 L50 69.3 L23.1 88.8 L33.4 57.2 L6.5 37.6 L39.7 37.6 Z"/></svg>
+  </div>
 
-    <p class="coverage"><strong>Tarrant, Dallas, and Collin counties are covered so far.</strong> They
-      are the three counties with ballots loaded today, and more Texas counties are being added. Until
-      then, nothing on this page describes a ballot outside those three.</p>
+  <div class="stripes">
+    <div class="stripe-white">
+      <div class="stripe-inner">
+        <p class="eyebrow">2026 general election</p>
+        <h1>Know every race on your ballot</h1>
+        <p class="mission">A guide to Texas ballots in which every candidate, endorsement, and donation is tied to a public record you can open and read yourself.</p>
+      </div>
+    </div>
+    <section class="stripe-red lookup" aria-labelledby="lookup-title">
+      <h2 id="lookup-title">Find the races on your ballot</h2>
+
+      <form id="lookup-form" class="lookup-form" novalidate>
+        <label for="lookup-address">Your street address</label>
+        <div class="lookup-row">
+          <input type="text" id="lookup-address" name="address" autocomplete="street-address"
+            placeholder="100 Main St, Fort Worth, TX 76102" spellcheck="false">
+          <button type="submit" id="lookup-submit">Find my races</button>
+        </div>
+
+        <p class="lookup-privacy">
+          <strong>Your address stays in your browser.</strong> It is sent to exactly one place &mdash;
+          the U.S. Census Bureau&rsquo;s free public geocoder at <code>geocoding.geo.census.gov</code>
+          &mdash; which turns it into a map coordinate and returns it. It is never sent to this site,
+          never stored, and never logged: this site is static files with no server and no database.
+          Matching that coordinate to your precinct happens entirely on your own device.
+        </p>
+      </form>
+
+      <p class="coverage"><strong>Covers Tarrant, Dallas, and Collin counties so far.</strong>
+        An address anywhere else in Texas will not match a precinct yet.</p>
+
+      <div id="lookup-status" class="lookup-status" role="status" aria-live="polite" hidden></div>
+      <div id="lookup-result" class="lookup-result" hidden></div>
+    </section>
   </div>
 </header>
 
 <div class="wrap page">
-
-  <section class="panel lookup" aria-labelledby="lookup-title">
-    <h2 id="lookup-title">Find the races on your ballot</h2>
-    <p class="lookup-intro">Enter your street address and this page will work out which voting
-      precinct you live in, then show only the races you are actually eligible to vote in.
-      <strong>This lookup covers Tarrant, Dallas, and Collin counties</strong> &mdash; an address anywhere
-      else in Texas will not match a precinct yet.</p>
-
-    <form id="lookup-form" class="lookup-form" novalidate>
-      <label for="lookup-address">Your street address</label>
-      <div class="lookup-row">
-        <input type="text" id="lookup-address" name="address" autocomplete="street-address"
-          placeholder="100 Main St, Fort Worth, TX 76102" spellcheck="false">
-        <button type="submit" id="lookup-submit">Find my races</button>
-      </div>
-
-      <p class="lookup-privacy">
-        <strong>Your address stays in your browser.</strong> It is sent to exactly one place &mdash;
-        the U.S. Census Bureau&rsquo;s free public geocoder at <code>geocoding.geo.census.gov</code>
-        &mdash; which turns it into a map coordinate and returns it. It is never sent to this site,
-        never stored, and never logged: this site is static files with no server and no database.
-        Matching that coordinate to your precinct happens entirely on your own device.
-      </p>
-    </form>
-
-    <div id="lookup-status" class="lookup-status" role="status" aria-live="polite" hidden></div>
-    <div id="lookup-result" class="lookup-result" hidden></div>
-  </section>
 
   <!-- Stands where the race list will go. Nothing is rendered on first load:
        the list is opened either by an address resolving or by the browse
@@ -267,7 +273,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="footer-name">Texas Voter Guide</p>
+    <p class="footer-name">Lone Star Voter Guide</p>
     <p>Candidate data comes from the Texas Secretary of State&rsquo;s certified ballot reports for
       the November 3, 2026 general election in
       <a href="sources/ballot-certification-2026-11-03.pdf">Tarrant County</a>,

@@ -1,4 +1,4 @@
-/* Texas Voter Guide — presentation only.
+/* Lone Star Voter Guide — presentation only.
 
    Mobile first: every base rule targets a phone held in one hand, and
    min-width queries only ever add width, never rearrange meaning.
@@ -9,21 +9,27 @@
    several hundred lines. */
 
 :root {
-  --bg: #faf8f5;
+  --bg: #f4f5f8;
   --surface: #ffffff;
-  --surface-sunk: #f6f2ec;
-  --text: #1c1a19;
-  --muted: #5d574f;
-  --faint: #8a8179;
-  --line: #e8e1d7;
-  --line-strong: #cdc3b5;
-  --hairline: #f0eae1;
+  --surface-sunk: #eef0f5;
+  --text: #141a2e;
+  --muted: #545b70;
+  --faint: #6f7588;
+  --line: #dde0e8;
+  --line-strong: #c3c8d4;
+  --hairline: #eceef3;
 
-  --red: #8a1518;          /* 9.1:1 on --bg */
-  --red-dark: #6b1013;
-  --red-deep: #5a0d10;
-  --red-soft: #f7ebe9;
-  --red-line: #e0c6c3;
+  --accent: #002868;          /* Texas flag blue; 13:1 on --bg */
+  --accent-dark: #001a45;
+  --accent-deep: #00133a;
+  --accent-soft: #eaeef6;
+  --accent-line: #c7d0e2;
+
+  /* The flag itself. Blue is also --accent; red is kept to the header stripe,
+     the election-day tile, and a few calls to action, never candidate rows. */
+  --flag-blue: #002868;
+  --flag-red: #bf0a30;
+  --flag-red-dark: #940826;
 
   --warn-bg: #fdf6e6;
   --warn-line: #d6a94a;
@@ -42,12 +48,12 @@
   --grn: #1b5b37;
   --grn-bg: #e8f3ec;
 
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif: "Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-  --r-sm: 8px;
-  --r: 14px;
-  --r-lg: 20px;
+  --r-sm: 6px;
+  --r: 10px;
+  --r-lg: 14px;
 
   /* Cards are lifted off the page instead of boxed in. Two layers: a tight
      contact shadow so edges read at all, and a wide soft one for depth. */
@@ -85,7 +91,7 @@ h1, h2, h3 {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.015em;
-  color: var(--red);
+  color: var(--accent);
 }
 
 p { margin: 0 0 12px; }
@@ -98,15 +104,15 @@ p:last-child { margin-bottom: 0; }
 }
 
 a {
-  color: var(--red);
+  color: var(--accent);
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
 
-a:hover { color: var(--red-dark); }
+a:hover { color: var(--accent-dark); }
 
 :focus-visible {
-  outline: 3px solid var(--red);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -135,52 +141,199 @@ a:hover { color: var(--red-dark); }
 }
 
 /* ==========================================================================
-   Hero — a solid red band, full bleed, that the page falls out of.
+   Header — laid out as the Texas flag. A blue hoist carries the lone star,
+   the name, and the menu; beside it (below it on a phone) a white stripe
+   holds the page title and a red stripe holds the one thing to do here:
+   the address lookup. Pages without a lookup keep a thin red stripe so the
+   flag still reads.
    ========================================================================== */
 
 .site-header {
-  background: var(--red);
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--flag-blue);
   color: #fff;
-  padding: 30px 0 34px;
-  /* A darker seam at the base keeps the band from ending on a flat cut. */
-  box-shadow: inset 0 -6px 0 var(--red-deep);
 }
 
-.site-header .eyebrow {
-  color: rgba(255, 255, 255, 0.72);
+.hoist {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 18px;
+  background: var(--flag-blue);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand:hover { color: #fff; }
+
+.brand-star {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+}
+
+.brand-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.brand-name small {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* The big star only appears once the hoist becomes its own column. */
+.hoist-star { display: none; }
+
+.stripes { display: grid; }
+
+.stripe-white {
+  padding: 28px 18px 26px;
+  background: #fff;
+  color: var(--text);
+}
+
+.stripe-inner { max-width: 660px; }
+
+.stripe-white .eyebrow {
   margin-bottom: 10px;
+  color: var(--flag-red);
 }
 
 .site-header h1 {
-  margin: 0 0 12px;
-  font-size: clamp(2.1rem, 8.5vw, 2.6rem);
-  color: #fff;
-  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  font-size: clamp(2.2rem, 9vw, 3.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--flag-blue);
+  text-wrap: balance;
 }
 
 .mission {
   margin: 0;
-  max-width: 34ch;
-  font-size: 1.06rem;
+  max-width: 46ch;
+  font-size: 1.02rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--muted);
 }
 
-/* The single most important caveat on the page, so it stays inside the band
-   rather than becoming one more panel below it. */
-.coverage {
-  margin: 22px 0 0;
-  max-width: 58ch;
-  padding: 13px 16px;
+.stripe-red {
+  background: var(--flag-red);
+  color: #fff;
+}
+
+.stripe-thin { height: 12px; }
+
+/* ---------- The lookup, living in the red stripe ----------
+   .site-header .lookup outranks the plain .panel/.lookup card rules further
+   down, including their wider-screen padding. */
+
+.site-header .lookup {
+  margin: 0;
+  padding: 22px 18px 26px;
+  background: var(--flag-red);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-header .lookup h2 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.site-header .lookup-form label { color: rgba(255, 255, 255, 0.88); }
+
+.site-header .lookup-row input {
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.site-header .lookup-row input:focus-visible {
+  outline: 3px solid var(--flag-blue);
+  outline-offset: 0;
+}
+
+.site-header .lookup-row button {
+  font-weight: 700;
+  background: var(--flag-blue);
+}
+
+.site-header .lookup-row button:hover:not(:disabled) { background: var(--accent-dark); }
+
+.site-header .lookup-row button:focus-visible,
+.site-header .brand:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.site-header .lookup-privacy {
   background: rgba(0, 0, 0, 0.16);
-  border-left: 4px solid rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.site-header .lookup-privacy strong { color: #fff; }
+.site-header .lookup-privacy code { background: rgba(255, 255, 255, 0.16); }
+
+.coverage {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  max-width: 62ch;
+  border-left: 4px solid rgba(255, 255, 255, 0.6);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
-  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.16);
+  font-size: 0.9rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .coverage strong { color: #fff; }
+
+/* Status and the matched-precinct panel keep their own light backgrounds, so
+   they take dark text back from the header. */
+.site-header .lookup-status { color: var(--muted); }
+.site-header .lookup-status-warn { color: var(--warn-text); }
+.site-header .lookup-status-error { color: var(--accent-dark); }
+.site-header .lookup-result { color: var(--text); }
+
+@media (min-width: 620px) {
+  .stripe-white { padding: 36px 28px 30px; }
+  .site-header .lookup { padding: 26px 28px 30px; }
+}
+
+@media (min-width: 900px) {
+  .site-header { grid-template-columns: minmax(300px, 1fr) 2fr; }
+
+  .hoist { padding: 24px 28px 30px; }
+
+  .hoist-star {
+    display: block;
+    width: 58%;
+    max-width: 180px;
+    margin: auto;
+    padding-block: 24px;
+  }
+
+  .stripe-white { padding: 44px 44px 36px; }
+  .site-header .lookup { padding: 30px 44px 34px; }
+  .stripe-thin { height: 18px; padding: 0; }
+}
+
 
 /* ---------- Masthead + navigation ----------
    A hamburger at every width: the links stay collapsed behind the button on
@@ -342,7 +495,7 @@ a:hover { color: var(--red-dark); }
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--red);
+  background: var(--accent);
   color: #fff;
   font-family: var(--serif);
   font-weight: 700;
@@ -391,7 +544,7 @@ a:hover { color: var(--red-dark); }
 
 .signup {
   padding: 22px 20px;
-  background: var(--red-soft);
+  background: var(--accent-soft);
   border-radius: var(--r);
   box-shadow: var(--shadow);
 }
@@ -428,7 +581,7 @@ a:hover { color: var(--red-dark); }
   min-width: 0;
   min-height: 48px;
   padding: 12px 14px;
-  border: 1px solid var(--red-line);
+  border: 1px solid var(--accent-line);
   border-radius: var(--r-sm);
   background: var(--surface);
   color: var(--text);
@@ -441,7 +594,7 @@ a:hover { color: var(--red-dark); }
   padding: 12px 22px;
   border: 0;
   border-radius: var(--r-sm);
-  background: var(--red);
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
   white-space: nowrap;
@@ -449,7 +602,7 @@ a:hover { color: var(--red-dark); }
   appearance: none;
 }
 
-.signup .embeddable-buttondown-form input[type="submit"]:hover { background: var(--red-dark); }
+.signup .embeddable-buttondown-form input[type="submit"]:hover { background: var(--accent-dark); }
 
 .signup .embeddable-buttondown-form p {
   margin: 0;
@@ -458,7 +611,7 @@ a:hover { color: var(--red-dark); }
 }
 
 .signup .embeddable-buttondown-form p a { color: var(--faint); }
-.signup .embeddable-buttondown-form p a:hover { color: var(--red); }
+.signup .embeddable-buttondown-form p a:hover { color: var(--accent); }
 
 /* ---------- Data-status notice ---------- */
 
@@ -539,7 +692,7 @@ a:hover { color: var(--red-dark); }
   color: var(--text);
 }
 
-.lookup-row input::placeholder { color: #a49a90; }
+.lookup-row input::placeholder { color: #8d93a3; }
 
 .lookup-row button {
   font: inherit;
@@ -548,13 +701,13 @@ a:hover { color: var(--red-dark); }
   padding: 12px 22px;
   border: 0;
   border-radius: var(--r-sm);
-  background: var(--red);
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
   white-space: nowrap;
 }
 
-.lookup-row button:hover:not(:disabled) { background: var(--red-dark); }
+.lookup-row button:hover:not(:disabled) { background: var(--accent-dark); }
 
 .lookup-row button:disabled {
   opacity: 0.6;
@@ -601,10 +754,10 @@ a:hover { color: var(--red-dark); }
 }
 
 .lookup-status-error {
-  background: var(--red-soft);
-  color: var(--red-dark);
+  background: var(--accent-soft);
+  color: var(--accent-dark);
   font-weight: 500;
-  box-shadow: inset 4px 0 0 var(--red);
+  box-shadow: inset 4px 0 0 var(--accent);
   padding-left: 16px;
 }
 
@@ -613,9 +766,9 @@ a:hover { color: var(--red-dark); }
 .lookup-result {
   margin-top: 18px;
   border-radius: var(--r);
-  background: var(--red-soft);
+  background: var(--accent-soft);
   padding: 18px 18px 16px;
-  box-shadow: inset 5px 0 0 var(--red);
+  box-shadow: inset 5px 0 0 var(--accent);
 }
 
 .ballot-head { margin-bottom: 2px; }
@@ -635,7 +788,7 @@ a:hover { color: var(--red-dark); }
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.05;
-  color: var(--red);
+  color: var(--accent);
   letter-spacing: -0.02em;
 }
 
@@ -655,7 +808,7 @@ a:hover { color: var(--red-dark); }
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--red-line);
+  border-top: 1px solid var(--accent-line);
 }
 
 .district-list li {
@@ -663,7 +816,7 @@ a:hover { color: var(--red-dark); }
   flex-direction: column;
   gap: 1px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--red-line);
+  border-bottom: 1px solid var(--accent-line);
 }
 
 .district-label {
@@ -711,21 +864,21 @@ a:hover { color: var(--red-dark); }
 }
 
 .ballot-toggle {
-  background: var(--red);
+  background: var(--accent);
   color: #fff;
 }
 
-.ballot-toggle:hover { background: var(--red-dark); }
+.ballot-toggle:hover { background: var(--accent-dark); }
 
 .ballot-clear {
   background: var(--surface);
   color: var(--text);
-  box-shadow: inset 0 0 0 1px var(--red-line);
+  box-shadow: inset 0 0 0 1px var(--accent-line);
 }
 
 .ballot-clear:hover {
-  color: var(--red);
-  box-shadow: inset 0 0 0 1px var(--red);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 /* ==========================================================================
@@ -744,7 +897,7 @@ a:hover { color: var(--red-dark); }
 .gate {
   background: var(--surface);
   border-radius: var(--r);
-  border-top: 4px solid var(--red);
+  border-top: 4px solid var(--accent);
   padding: 22px 20px;
   box-shadow: var(--shadow);
 }
@@ -778,7 +931,7 @@ a:hover { color: var(--red-dark); }
   padding: 10px 0;
   border: 0;
   background: none;
-  color: var(--red);
+  color: var(--accent);
   text-align: left;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -786,7 +939,7 @@ a:hover { color: var(--red-dark); }
 }
 
 .gate-link:hover {
-  color: var(--red-dark);
+  color: var(--accent-dark);
   text-decoration-thickness: 2px;
 }
 
@@ -852,7 +1005,7 @@ a:hover { color: var(--red-dark); }
   font-size: 1.45rem;
   font-weight: 700;
   line-height: 1;
-  color: var(--red);
+  color: var(--accent);
 }
 
 .date-title {
@@ -875,14 +1028,14 @@ a:hover { color: var(--red-dark); }
 .date-note {
   margin: 16px 0 0;
   padding: 12px 14px;
-  background: var(--red-soft);
+  background: var(--accent-soft);
   border-radius: var(--r-sm);
-  color: var(--red-dark);
+  color: var(--accent-dark);
   font-size: 0.87rem;
   line-height: 1.55;
 }
 
-.date-note strong { color: var(--red-deep); }
+.date-note strong { color: var(--accent-deep); }
 
 /* ---------- Data provenance ---------- */
 
@@ -907,7 +1060,7 @@ a:hover { color: var(--red-dark); }
 .prov-item {
   padding: 14px 16px;
   background: var(--surface-sunk);
-  border-left: 3px solid var(--red-line);
+  border-left: 3px solid var(--accent-line);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
 
@@ -1159,8 +1312,8 @@ a:hover { color: var(--red-dark); }
 }
 
 .control button:hover {
-  color: var(--red);
-  border-color: var(--red);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* ---------- Filter feedback ---------- */
@@ -1168,9 +1321,9 @@ a:hover { color: var(--red-dark); }
 .filter-note {
   margin: 14px 0 0;
   padding: 11px 14px;
-  background: var(--red-soft);
+  background: var(--accent-soft);
   border-radius: var(--r-sm);
-  color: var(--red-dark);
+  color: var(--accent-dark);
   font-size: 0.85rem;
   line-height: 1.5;
   font-weight: 500;
@@ -1205,8 +1358,8 @@ a:hover { color: var(--red-dark); }
 }
 
 .print-button:hover {
-  color: var(--red);
-  border-color: var(--red);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Exists only on paper — see the print stylesheet at the end of this file. */
@@ -1255,7 +1408,7 @@ a:hover { color: var(--red-dark); }
   color: var(--faint);
 }
 
-.badge-school { color: var(--red); }
+.badge-school { color: var(--accent); }
 
 /* ---------- Race cards ---------- */
 
@@ -1311,7 +1464,7 @@ a:hover { color: var(--red-dark); }
 .race-note {
   flex: 0 0 100%;
   margin-top: 2px;
-  color: var(--red-dark);
+  color: var(--accent-dark);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1346,7 +1499,7 @@ a:hover { color: var(--red-dark); }
 }
 
 .office-toggle:hover .office-toggle-text {
-  text-decoration-color: var(--red);
+  text-decoration-color: var(--accent);
 }
 
 /* Sized and spaced as its own tap target rather than as punctuation: on a
@@ -1369,14 +1522,14 @@ a:hover { color: var(--red-dark); }
 }
 
 .office-toggle:hover .office-toggle-icon {
-  background: var(--red-soft);
-  border-color: var(--red-line);
-  color: var(--red-dark);
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent-dark);
 }
 
 .office-toggle[aria-expanded="true"] .office-toggle-icon {
-  background: var(--red);
-  border-color: var(--red);
+  background: var(--accent);
+  border-color: var(--accent);
   color: #fff;
 }
 
@@ -1388,7 +1541,7 @@ a:hover { color: var(--red-dark); }
   margin-top: 10px;
   padding: 12px 14px;
   border-radius: var(--r-sm);
-  border-left: 3px solid var(--red-line);
+  border-left: 3px solid var(--accent-line);
   background: var(--surface-sunk);
 }
 
@@ -1485,7 +1638,7 @@ details.candidate[open] > .candidate-row::after {
   transform: rotate(225deg);
 }
 
-details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
+details.candidate > .candidate-row:hover .candidate-name { color: var(--accent); }
 
 .candidate-name {
   font-size: 0.98rem;
@@ -1500,7 +1653,7 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
    that the names stay readable to anyone looking past the highlight. */
 .candidate-dim { opacity: 0.45; }
 
-.candidate-match .candidate-name { color: var(--red-dark); }
+.candidate-match .candidate-name { color: var(--accent-dark); }
 
 /* ---------- Party chips ----------
    Filled, labelled, and shaped. The glyph's outline differs per party
@@ -1653,9 +1806,9 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
 }
 
 .status-error {
-  color: var(--red-dark);
-  background: var(--red-soft);
-  box-shadow: inset 5px 0 0 var(--red);
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  box-shadow: inset 5px 0 0 var(--accent);
   text-align: left;
 }
 
@@ -1760,14 +1913,14 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
   padding: 12px 26px;
   border: 0;
   border-radius: var(--r-sm);
-  background: var(--red);
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.contact-submit:hover { background: var(--red-dark); }
+.contact-submit:hover { background: var(--accent-dark); }
 
 /* Bot bait. Not .visually-hidden: that keeps the field in the accessibility
    tree, where a screen reader would read out a question no person should
@@ -1792,7 +1945,7 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
   font-weight: 700;
   font-size: 1.05rem;
   line-height: 1.2;
-  color: var(--red);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
@@ -1822,11 +1975,6 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
     --gap-group: 80px;
   }
 
-  .site-header { padding: 52px 0 54px; }
-
-  .site-header h1 { font-size: 3rem; }
-  .mission { font-size: 1.18rem; max-width: 42ch; }
-  .coverage { margin-top: 26px; padding: 15px 20px; font-size: 1rem; }
 
   .page { padding-top: 40px; }
 
@@ -1917,6 +2065,111 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--red); }
 
   .candidate-row { padding: 13px 0; }
 }
+
+/* ==========================================================================
+   Lone Star touches below the header. Kept to a few places on purpose: the
+   flag belongs to the chrome, and candidate rows stay neutral.
+   ========================================================================== */
+
+/* Key dates as calendar tear-offs: blue for early voting, red for election day. */
+.date-list li {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.date-when {
+  flex: 0 0 5.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 6px;
+  text-align: center;
+  background: var(--flag-blue);
+}
+
+.date-list li:last-child .date-when { background: var(--flag-red); }
+
+.date-month { color: rgba(255, 255, 255, 0.85); }
+
+.date-day {
+  font-size: 1.5rem;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.date-what { padding: 14px 16px; }
+
+.date-title {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+/* Race cards get a blue cap so a long ballot reads as a stack of cards. */
+.race { border-top: 4px solid var(--flag-blue); }
+
+/* The sourcing pledge is the site's promise, so it gets the flag's blue. */
+.sourcing {
+  background: var(--flag-blue);
+  box-shadow: none;
+}
+
+.sourcing h2 { color: #fff; }
+
+.sourcing h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 5px;
+  margin-top: 12px;
+  background: var(--flag-red);
+}
+
+.sourcing p,
+.sourcing li { color: rgba(255, 255, 255, 0.88); }
+
+.sourcing strong { color: #fff; }
+
+.sourcing a,
+.sourcing a:hover { color: #fff; }
+
+.signup {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.signup .embeddable-buttondown-form input[type="submit"] { background: var(--flag-red); }
+.signup .embeddable-buttondown-form input[type="submit"]:hover { background: var(--flag-red-dark); }
+
+/* Footer: deep navy with a flag stripe across the top. */
+.site-footer {
+  position: relative;
+  padding-top: 32px;
+  background: var(--accent-dark);
+  border-top: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background:
+    linear-gradient(90deg, var(--flag-blue) 33.333%, transparent 33.333%),
+    linear-gradient(180deg, #fff 50%, var(--flag-red) 50%);
+}
+
+.footer-name { color: #fff; }
+
+.site-footer a,
+.site-footer a:hover { color: #fff; }
+
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
