@@ -31,6 +31,9 @@
 
   var state = {
     candidates: [],
+    // id -> position in candidates.json. The tiebreak for candidates in one
+    // race that have no ballot position: see byBallotOrder.
+    fileOrder: Object.create(null),
     type: 'all',
     jurisdiction: 'all',
     // Party never removes anything: it highlights one party and dims the rest,
@@ -229,9 +232,14 @@
   // subtraction: finite - Infinity is -Infinity, which would read as "sorts
   // first" from the wrong side of the pair.
   //
-  // The id tiebreak applies only to genuinely equal positions — including two
+  // The tiebreak applies only to genuinely equal positions — including two
   // that are both Infinity, where the subtraction would be NaN and a NaN
-  // comparator leaves the order undefined per spec.
+  // comparator leaves the order undefined per spec. Within one race it is the
+  // order the records sit in candidates.json, which is the order the data was
+  // written in: for a race with no published ballot drawing (Keller ISD) that
+  // is the order its raceNote describes, and an id is no stand-in for it,
+  // because an id starts with the first name, not the surname. Across races
+  // it stays the id, which keeps a race's candidates together.
   function byBallotOrder(a, b) {
     var oa = ballotOrder(a);
     var ob = ballotOrder(b);
@@ -239,6 +247,11 @@
       if (oa === Infinity) return 1;
       if (ob === Infinity) return -1;
       return oa - ob;
+    }
+    if (raceKey(a) === raceKey(b)) {
+      var fa = state.fileOrder[idOf(a)];
+      var fb = state.fileOrder[idOf(b)];
+      if (fa !== undefined && fb !== undefined && fa !== fb) return fa - fb;
     }
     return idOf(a).localeCompare(idOf(b));
   }
@@ -279,11 +292,16 @@
   // no longer says which office it is. Absent county is normalized to null so
   // a statewide race reads the same whether the record omitted the field or
   // set it null.
+  //
+  // raceNote is a caveat about the race as a whole, shown on its card. Every
+  // record in the race carries the same text, so the first one seen supplies
+  // it; a race whose records carry none has a null note and shows nothing.
   function newRace(c) {
     return {
       race: c.race || 'Unspecified race',
       county: c.county === undefined ? null : c.county,
       electionDate: c.electionDate || '',
+      note: typeof c.raceNote === 'string' && c.raceNote.trim() ? c.raceNote.trim() : null,
       candidates: []
     };
   }
@@ -684,6 +702,8 @@
     // title, election date and party note — and above the candidates.
     if (disclosure) head.appendChild(disclosure.panel);
     box.appendChild(head);
+    // Directly above the names, because what it qualifies is their order.
+    if (race.note) box.appendChild(el('p', 'race-caveat', race.note));
     race.candidates.forEach(function (c) { box.appendChild(renderCandidate(c)); });
     return box;
   }
@@ -1750,6 +1770,7 @@
     }
 
     state.candidates = list;
+    list.forEach(function (c, i) { state.fileOrder[idOf(c)] = i; });
 
     if (data && data.meta && data.meta.lastUpdated) {
       els.lastUpdated.textContent = 'Data last updated: ' + data.meta.lastUpdated;

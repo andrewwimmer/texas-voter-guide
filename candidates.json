@@ -1,14 +1,15 @@
 {
   "meta": {
     "title": "Tarrant, Dallas, and Collin County Voter Guide",
-    "note": "Race names, candidate names, and party labels are transcribed from the Texas Secretary of State Ballot Certification Reports for the November 3, 2026 general election in Tarrant County (sources/ballot-certification-2026-11-03.pdf), Dallas County (sources/ballot-certification-dallas-2026-11-03.pdf), and Collin County (sources/ballot-certification-collin-2026-11-03.pdf). The Tarrant Appraisal District board races are the exception: they are not on any certification report, and are taken from the Tarrant County Elections qualified-candidate list (sources/tad-candidates-2026-11-03.pdf), the ballot order drawn by TAD on August 25, 2026 (sources/tad-ballot-drawing-2026-11-03.pdf), and the county sample ballot (https://gisit.tarrantcounty.com/TCVL/) for the spelling of each name as printed. Party is null on those records because the office is nonpartisan by law and no source prints a party for it; null means nonpartisan, never party unknown. Endorsement and donation data has not been collected yet; those arrays are empty for every candidate. Each entry carries a ballotOrder keyed by county name: its 1-based position in that county's certification report, which is the order the races and the candidates within each race appear on that county's printed ballot. A statewide or shared-district race certified by more than one county is a single record carrying a position for each. A race title more than one county uses for different offices - COUNTY JUDGE, DISTRICT CLERK, COUNTY COMMISSIONER PRECINCT 2 - is separate records per county, told apart by the county field.",
+    "note": "Race names, candidate names, and party labels are transcribed from the Texas Secretary of State Ballot Certification Reports for the November 3, 2026 general election in Tarrant County (sources/ballot-certification-2026-11-03.pdf), Dallas County (sources/ballot-certification-dallas-2026-11-03.pdf), and Collin County (sources/ballot-certification-collin-2026-11-03.pdf). The Tarrant Appraisal District board races are the exception: they are not on any certification report, and are taken from the Tarrant County Elections qualified-candidate list (sources/tad-candidates-2026-11-03.pdf), the ballot order drawn by TAD on August 25, 2026 (sources/tad-ballot-drawing-2026-11-03.pdf), and the county sample ballot (https://gisit.tarrantcounty.com/TCVL/) for the spelling of each name as printed. Party is null on those records because the office is nonpartisan by law and no source prints a party for it; null means nonpartisan, never party unknown. Endorsement and donation data has not been collected yet; those arrays are empty for every candidate. Each entry carries a ballotOrder keyed by county name: its 1-based position in that county's certification report, which is the order the races and the candidates within each race appear on that county's printed ballot. A statewide or shared-district race certified by more than one county is a single record carrying a position for each. A race title more than one county uses for different offices - COUNTY JUDGE, DISTRICT CLERK, COUNTY COMMISSIONER PRECINCT 2 - is separate records per county, told apart by the county field. The Keller ISD board of trustees races are the second exception: they are taken from Keller ISD's elections page (https://www.kellerisd.net/board-of-trustees/elections), are gated to voters whose Tarrant sub-precinct lies in Keller ISD by district {type: \"isd\", code: \"KEL\"}, and carry no ballotOrder because Keller ISD has not published its ballot order drawing; their candidates are listed alphabetically by surname, in file order, and each record's raceNote says so on the race card.",
     "sources": [
       "sources/ballot-certification-2026-11-03.pdf",
       "sources/ballot-certification-dallas-2026-11-03.pdf",
       "sources/ballot-certification-collin-2026-11-03.pdf",
       "sources/tad-candidates-2026-11-03.pdf",
       "sources/tad-ballot-drawing-2026-11-03.pdf",
-      "https://gisit.tarrantcounty.com/TCVL/"
+      "https://gisit.tarrantcounty.com/TCVL/",
+      "https://www.kellerisd.net/board-of-trustees/elections"
     ],
     "lastUpdated": "2026-09-19"
   },
@@ -8159,6 +8160,167 @@
         "sources/tad-candidates-2026-11-03.pdf",
         "sources/tad-ballot-drawing-2026-11-03.pdf",
         "https://gisit.tarrantcounty.com/TCVL/"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-4-geramie-parrish",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 4",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "GERAMIE PARRISH",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-4-rachel-weatherington",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 4",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "RACHEL WEATHERINGTON",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-5-chris-coker",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 5",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "CHRIS COKER",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-5-colin-hodges",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 5",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "COLIN HODGES",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-5-andrew-walsh",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 5",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "ANDREW WALSH",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-6-special-election-barbara-brewer",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 6 (SPECIAL ELECTION)",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "BARBARA BREWER",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
+      ],
+      "endorsements": [],
+      "donations": []
+    },
+    {
+      "id": "2026-11-03-tarrant-keller-isd-board-of-trustees-place-6-special-election-tommie-johnson",
+      "race": "KELLER ISD BOARD OF TRUSTEES, PLACE 6 (SPECIAL ELECTION)",
+      "raceNote": "Candidates are listed alphabetically. Keller ISD has not published the ballot order drawing for this race, so the order here may differ from your printed ballot.",
+      "jurisdiction": {
+        "name": "Keller ISD",
+        "type": "county"
+      },
+      "county": "Tarrant",
+      "district": {
+        "type": "isd",
+        "code": "KEL"
+      },
+      "electionDate": "2026-11-03",
+      "candidate": "TOMMIE JOHNSON",
+      "party": null,
+      "unopposed": false,
+      "sources": [
+        "https://www.kellerisd.net/board-of-trustees/elections"
       ],
       "endorsements": [],
       "donations": []

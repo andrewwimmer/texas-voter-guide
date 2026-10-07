@@ -1471,6 +1471,18 @@ a:hover { color: var(--accent-dark); }
   letter-spacing: 0.08em;
 }
 
+/* A record's raceNote: a caveat about the race as printed here, such as an
+   unpublished ballot drawing. Plain sentence case, since it is read rather
+   than scanned, and set off from the names it qualifies. */
+.race-caveat {
+  margin: -4px 0 10px;
+  padding-left: 10px;
+  border-left: 3px solid var(--surface-sunk);
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 /* ---------- Office explanations ---------- */
 
 /* A race title that has an explanation behind it is still, first, the race
@@ -2371,6 +2383,18 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--accent);
     letter-spacing: 0;
     line-height: 1.2;
     text-transform: none;
+  }
+
+  /* Kept on paper: a voter carrying the slate needs to know its order may
+     not match the ballot in front of them. */
+  .race-caveat {
+    margin: 0;
+    padding: 0 0 0 9pt;
+    border: 0;
+    color: #000;
+    font-size: 8pt;
+    font-style: italic;
+    line-height: 1.2;
   }
 
   /* ---------- Candidate lines ---------- */
