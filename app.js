@@ -929,8 +929,24 @@
   //
   // ---- Where these files come from, and what a re-pull costs ---------------
   //
-  // Tarrant — data/precincts.geojson, 707 features. Used as published.
-  //   https://mapit.tarrantcounty.com/arcgis/rest/services/Dynamic/VotingPrecinct/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson
+  // Tarrant — data/tarrant-subprecincts.geojson, 1,703 sub-precinct features
+  // covering the 707 precincts. A precinct split by a city or school district
+  // line is several features, each carrying its own districts, so the file
+  // can answer City and ISD where the whole-precinct layer could not. NOT
+  // usable as published: two transformations were applied and must be redone
+  // on any re-pull.
+  //   https://mapit.tarrantcounty.com/arcgis/rest/services/Dynamic/VotingSubPrecincts/MapServer/0/query?where=1%3D1&outFields=SUB_ID,Precinct,DT2,DT3,DT4,DT5,DT21,DT23,DT6,DT8&returnGeometry=true&outSR=4326&f=geojson
+  //     1. Rename the fields, dropping every other one:
+  //          DT2  -> Congress     DT3  -> Senate      DT4 -> House
+  //          DT5  -> Commish      DT21 -> JP          DT23 -> Education
+  //          DT6  -> City         DT8  -> ISD
+  //        SUB_ID and Precinct keep their names; Precinct as an integer.
+  //     2. Trim whitespace from every value; an empty value becomes null.
+  //   Leading zeros (JP "06") are left in the file and stripped on load by
+  //   normalizePrecinctProps. The DT codes carry no aliases in the service;
+  //   their meanings were established Oct 6, 2026 by matching values against
+  //   the old precinct file and the county's city and school district layers.
+  //   The old whole-precinct file, data/precincts.geojson, is no longer read.
   //
   // Dallas — data/dallas-precincts.geojson, 791 features. NOT usable as
   // published: two transformations were applied and must be redone on any
@@ -965,16 +981,17 @@
   // RE-PULLING ANY FILE MEANS UPDATING THREE THINGS:
   //   - that county's bounding box above, recomputed from the new file;
   //   - for Dallas and Collin, that county's transformations above;
-  //   - the 1,771 / 707 / 791 / 273 figures in about.html's precinct
+  //   - the 1,771 / 707 / 791 / 273 figures in sources.html's precinct
   //     provenance item, which are transcribed because they cannot be derived
-  //     in the browser without downloading every file.
+  //     in the browser without downloading every file. Tarrant's figure is
+  //     precincts, not features: 707, not 1,703.
   //
   // None of it is checked at runtime and each part fails silently, so skipping
   // a step produces wrong results rather than an error.
   // -------------------------------------------------------------------------
   var COUNTIES = [
-    { name: 'Tarrant', url: 'data/precincts.geojson',
-      minLon: -97.552987, minLat: 32.548662, maxLon: -97.031007, maxLat: 32.994003 },
+    { name: 'Tarrant', url: 'data/tarrant-subprecincts.geojson',
+      minLon: -97.552995, minLat: 32.548667, maxLon: -97.031014, maxLat: 32.994009 },
     { name: 'Dallas', url: 'data/dallas-precincts.geojson',
       minLon: -97.038685, minLat: 32.545222, maxLon: -96.516877, maxLat: 32.989692 },
     { name: 'Collin', url: 'data/collin-precincts.geojson',
@@ -1015,19 +1032,69 @@
     return names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1] + ' counties';
   }
 
+  // Tarrant's sub-precinct codes -> display names. Names are from the
+  // county's own CityBoundariesWUnincorp and SchoolDistricts layers on the
+  // same server; the sub-precinct layer carries only the codes. A code
+  // missing here displays as itself rather than being guessed at. The
+  // sub-precinct layer also has one feature each with ISD "NRH" and "SLK",
+  // which are not school districts; they are left unmapped on purpose.
+  var CITY_NAMES = {
+    ARL: 'Arlington', AZL: 'Azle', BED: 'Bedford', BEN: 'Benbrook',
+    BLM: 'Blue Mound', BUR: 'Burleson', CLV: 'Colleyville', CRO: 'Crowley',
+    DLW: 'Dalworthington Gardens', EDG: 'Edgecliff Village', EUL: 'Euless',
+    EVR: 'Everman', FLM: 'Flower Mound', FRH: 'Forest Hill', FTW: 'Fort Worth',
+    GPR: 'Grand Prairie', GPV: 'Grapevine', HAL: 'Haltom City', HAS: 'Haslet',
+    HUR: 'Hurst', KEL: 'Keller', KEN: 'Kennedale', LKS: 'Lakeside',
+    LKW: 'Lake Worth', MAN: 'Mansfield', NEW: 'Newark',
+    NRH: 'North Richland Hills', PAN: 'Pantego', PEL: 'Pelican Bay',
+    RCH: 'Richland Hills', REN: 'Reno', RNK: 'Roanoke', RVO: 'River Oaks',
+    SAG: 'Saginaw', SLK: 'Southlake', SPK: 'Sansom Park', TRC: 'Trophy Club',
+    WAT: 'Watauga', WLK: 'Westlake', WOH: 'Westover Hills',
+    WSM: 'White Settlement', WWV: 'Westworth Village'
+  };
+
+  var ISD_NAMES = {
+    ALE: 'Aledo ISD', ARL: 'Arlington ISD', AZL: 'Azle ISD', BIR: 'Birdville ISD',
+    BUR: 'Burleson ISD', CAR: 'Carroll ISD', CAS: 'Castleberry ISD',
+    CRO: 'Crowley ISD', EMS: 'Eagle Mountain-Saginaw ISD', EVE: 'Everman ISD',
+    FTW: 'Fort Worth ISD', GDL: 'Godley ISD', GVC: 'Grapevine-Colleyville ISD',
+    HEB: 'Hurst-Euless-Bedford ISD', KEL: 'Keller ISD', KEN: 'Kennedale ISD',
+    LEW: 'Lewisville ISD', LKW: 'Lake Worth ISD', MAN: 'Mansfield ISD',
+    NOR: 'Northwest ISD', WSM: 'White Settlement ISD'
+  };
+
   // Each district race in candidates.json is tied to exactly one property on
   // the precinct feature. Anything that matches none of these is a countywide
   // or statewide race, which every voter in that county votes in. Every
-  // county's precinct file uses these same six property names; Dallas's and
-  // Collin's were renamed to them at import (see COUNTIES).
+  // county's precinct file uses these same six numeric property names;
+  // Dallas's and Collin's were renamed to them at import (see COUNTIES).
+  //
+  // City and ISD are letter codes, not numbers (code: true), and only the
+  // Tarrant file carries them. A file without the property at all leaves the
+  // row off the ballot panel instead of reporting it as unrecorded, so the
+  // Dallas and Collin panels are unchanged. noneText is what a present but
+  // empty value means: for City that is the "--" an unincorporated area
+  // carries. offBallotNote replaces the staggered-terms note for fields where
+  // that explanation would be wrong — no city or school board race in this
+  // guide says nothing about whether a seat is up.
   var DISTRICT_FIELDS = [
     { key: 'Congress',  label: 'U.S. House',                  describe: function (v) { return 'Congressional District ' + v; } },
     { key: 'Senate',    label: 'Texas Senate',                describe: function (v) { return 'State Senate District ' + v; } },
     { key: 'House',     label: 'Texas House',                 describe: function (v) { return 'State House District ' + v; } },
     { key: 'Education', label: 'State Board of Education',    describe: function (v) { return 'SBOE District ' + v; } },
     { key: 'Commish',   label: 'County Commissioner',         describe: function (v) { return 'Commissioner Precinct ' + v; } },
-    { key: 'JP',        label: 'Justice of the Peace',        describe: function (v) { return 'JP Precinct ' + v; } }
+    { key: 'JP',        label: 'Justice of the Peace',        describe: function (v) { return 'JP Precinct ' + v; } },
+    { key: 'City',      label: 'City',                        code: true,
+      describe: function (v) { return CITY_NAMES[v] || v; },
+      noneText: 'none — unincorporated area',
+      offBallotNote: 'no city races in this guide for this ballot' },
+    { key: 'ISD',       label: 'School district',             code: true,
+      describe: function (v) { return ISD_NAMES[v] || v; },
+      offBallotNote: 'no school board races in this guide for this ballot' }
   ];
+
+  var DISTRICT_FIELD_BY_KEY = Object.create(null);
+  DISTRICT_FIELDS.forEach(function (f) { DISTRICT_FIELD_BY_KEY[f.key] = f; });
 
   // candidates.json district.type -> the precinct property that gates it.
   // A type absent from this map leaves the candidate ungated rather than
@@ -1042,18 +1109,26 @@
     'jp':          'JP',
     // Dallas elects a constable per justice-of-the-peace precinct, off the
     // same precinct boundaries, so both types read the one JP property.
-    'constable':   'JP'
+    'constable':   'JP',
+    // Letter codes, carried as district.code ({ type: 'isd', code: 'HEB' }).
+    // Codes are unique only within their type — ARL, FTW and KEL are each
+    // both a city and a school district — which is why the comparison in
+    // matchesBallot is always against the one property the type names.
+    'city':        'City',
+    'isd':         'ISD'
   };
 
   var NO_DISTRICT = { field: null, value: null };
 
   // { type: 'ushouse', number: 6 } -> { field: 'Congress', value: '6' };
+  // { type: 'city', code: 'bed' } -> { field: 'City', value: 'BED' };
   // null district, or an unrecognized type -> { field: null }.
   function districtRule(district) {
     if (!district) return NO_DISTRICT;
     var field = DISTRICT_TYPE_FIELDS[district.type];
     if (!field) return NO_DISTRICT;
-    return { field: field, value: normalizeDistrict(district.number) };
+    var raw = DISTRICT_FIELD_BY_KEY[field].code ? district.code : district.number;
+    return { field: field, value: normalizeFieldValue(field, raw) };
   }
 
   /* RACE_PATTERNS and raceRule below are the previous title-parsing path.
@@ -1101,6 +1176,34 @@
     var n = String(value).trim();
     if (!/^\d+$/.test(n)) return null;
     return String(parseInt(n, 10));
+  }
+
+  // The letter-code path: " heb " and "HEB" are the same district. "--" is
+  // how the Tarrant file marks a sub-precinct in no city, and it normalizes
+  // to null so no candidate can ever match it.
+  function normalizeCode(value) {
+    if (value === undefined || value === null) return null;
+    var c = String(value).trim().toUpperCase();
+    if (!c || c === '--') return null;
+    return c;
+  }
+
+  function normalizeFieldValue(key, value) {
+    var field = DISTRICT_FIELD_BY_KEY[key];
+    return field && field.code ? normalizeCode(value) : normalizeDistrict(value);
+  }
+
+  // Run once per feature as a county file is indexed, so every lookup reads
+  // canonical values: Tarrant's JP "06" becomes "6", matching the other
+  // counties and candidates.json. Only properties the feature actually has
+  // are written — an absent City stays absent, which is how the ballot panel
+  // tells "this county's file has no cities" from "no city here".
+  function normalizePrecinctProps(props) {
+    var out = {};
+    Object.keys(props).forEach(function (k) {
+      out[k] = DISTRICT_FIELD_BY_KEY[k] ? normalizeFieldValue(k, props[k]) : props[k];
+    });
+    return out;
   }
 
   // Districts that have a race on this ballot at all. Texas staggers its
@@ -1161,15 +1264,15 @@
   var precinctIndexes = Object.create(null);
 
   // Precompute each feature's bounding box once so a lookup rejects nearly
-  // all of a county's precincts (707 in Tarrant, 791 in Dallas, 273 in
-  // Collin) with four numeric comparisons instead of walking their rings.
-  // Only outer rings contribute to the box; a hole is inside its own.
+  // all of a county's features (1,703 sub-precincts in Tarrant, 791 precincts
+  // in Dallas, 273 in Collin) with four numeric comparisons instead of
+  // walking their rings. Only outer rings contribute to the box; a hole is
+  // inside its own.
   //
   // The county is stamped on at index time from the COUNTIES entry that named
-  // the file. It is deliberately not read off the feature: the Tarrant file
-  // carries a County property and the Dallas and Collin files have none, and
-  // inventing one would mean editing published GIS data to carry a fact this
-  // code already knows.
+  // the file. It is deliberately not read off the feature: none of the three
+  // files carries a County property, and inventing one would mean editing
+  // published GIS data to carry a fact this code already knows.
   function indexPrecincts(geo, countyName) {
     var features = (geo && geo.features) || [];
     var index = [];
@@ -1200,7 +1303,7 @@
         minX: minX, minY: minY, maxX: maxX, maxY: maxY,
         polys: polys,
         county: countyName,
-        props: features[i].properties || {}
+        props: normalizePrecinctProps(features[i].properties || {})
       });
     }
 
@@ -1210,7 +1313,7 @@
     return index;
   }
 
-  // Fetched on first use only — the files run 2.9 to 4.6 MB and most visitors
+  // Fetched on first use only — the files run 2.9 to 6.3 MB and most visitors
   // never touch the lookup. A failure clears that county's cached promise so a retry
   // re-fetches instead of replaying the same rejection forever.
   function loadPrecincts(county) {
@@ -1372,16 +1475,19 @@
 
     var list = el('ul', 'district-list');
     DISTRICT_FIELDS.forEach(function (field) {
+      if (field.code && !(field.key in ballot.districts)) return;
       var value = ballot.districts[field.key];
       var li = el('li');
       li.appendChild(el('span', 'district-label', field.label));
 
       if (!value) {
-        li.appendChild(el('span', 'district-value district-unknown', 'not recorded for this precinct'));
+        li.appendChild(el('span', 'district-value district-unknown',
+          field.noneText || 'not recorded for this precinct'));
       } else {
         li.appendChild(el('span', 'district-value', field.describe(value)));
         if (!ballot.onBallot[field.key][value]) {
-          li.appendChild(el('span', 'district-note', 'not on the 2026 ballot — this seat is not up for election this cycle'));
+          li.appendChild(el('span', 'district-note', field.offBallotNote ||
+            'not on the 2026 ballot — this seat is not up for election this cycle'));
         }
       }
       list.appendChild(li);
@@ -1439,8 +1545,12 @@
       onBallot: onBallot
     };
 
+    // Values arrive already normalized (normalizePrecinctProps, at index
+    // time). A letter-code field the county's file does not carry is left off
+    // districts entirely, which is what keeps it off the panel.
     DISTRICT_FIELDS.forEach(function (field) {
-      districts[field.key] = normalizeDistrict(props[field.key]);
+      if (field.code && !(field.key in props)) return;
+      districts[field.key] = props[field.key] === undefined ? null : props[field.key];
       onBallot[field.key] = districtsOnBallot(field.key);
     });
 
@@ -1539,9 +1649,9 @@
     // The focus warm-up is gone. It prefetched the one precinct file on the
     // theory that there was only one to want; with a county per file, focus
     // cannot know which. The two ways to keep it are both worse than dropping
-    // it: warming every county pulls 11.7 MB for a field the visitor may only
+    // it: warming every county pulls 13.7 MB for a field the visitor may only
     // have tabbed through, and warming DEFAULT_COUNTY alone is a guess that
-    // costs a Dallas or Collin voter a wasted 4.6 MB before their real file
+    // costs a Dallas or Collin voter a wasted 6.3 MB before their real file
     // starts.
     //
     // The cost is real — the download no longer overlaps the geocode, so a
