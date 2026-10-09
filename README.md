@@ -13,9 +13,11 @@ counties, plus Tarrant Appraisal District sources for the TAD board races, which
 appear on no certification report. Every source is listed, with a link to the
 record it came from, on the site's Sources page (`sources.html`).
 
-> **⚠️ Endorsement and donation data is not populated yet.** Race names,
-> candidate names, and party labels in `candidates.json` are real, but the
-> `endorsements` and `donations` arrays are empty for every candidate.
+> **⚠️ Endorsement data is partial and donation data is not populated yet.**
+> Race names, candidate names, and party labels in `candidates.json` are real.
+> A few candidates carry `endorsements` entries reported from other
+> organizations; every other candidate's array is empty, and `donations` is
+> empty for every candidate.
 
 ## Stack
 
@@ -160,11 +162,41 @@ Field notes:
   contest. Two counties' identically titled offices stay separate races.
 - Dates are `YYYY-MM-DD` and are formatted for display; anything else is printed
   as-is.
-- `sourceUrl` is required on every endorsement and donation. Only `http://` and
-  `https://` URLs are rendered as links; anything else is shown as plain text
-  noting the source URL is missing or invalid.
-- `sourceLabel` is the link text. `note` and `amount` are optional.
-- Empty `endorsements` / `donations` arrays render as "No endorsements recorded."
+- Each `endorsements` entry is an endorsement or recommendation reported from
+  another organization; the site makes none of its own:
+
+  ```json
+  {
+    "organization": "True Texas Project",
+    "type": "recommendation",
+    "url": "https://truetexasproject.com/elections/",
+    "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+    "retrieved": "2026-10-08",
+    "note": "Listed as \"Parish\" on the source page"
+  }
+  ```
+
+  - `organization` is the group's name as it publishes it.
+  - `type` is `"endorsement"` or `"recommendation"` — the organization's own
+    word for what it did, not the site's. The two render as the same neutral
+    tag, told apart by its text and a solid vs. dashed outline.
+  - `url` is the organization's live page. Only `http://` and `https://` URLs
+    are rendered as links.
+  - `source` is the archived copy of that page, checked in under `sources/`.
+    Only a path of the form `sources/<filename>` is rendered as a link.
+  - `retrieved` is the `YYYY-MM-DD` date the page was captured, shown as
+    "Retrieved …" because these lists change.
+  - `note` is optional, for anything the reader should know about the entry,
+    such as the organization spelling a name differently from the ballot.
+  - On the printed slate each entry is reduced to organization and type, e.g.
+    "True Texas Project (recommendation)"; links, dates, and notes stay off.
+- `donations` entries use `donor`, `amount`, `date`, `sourceUrl`, and
+  `sourceLabel`. `sourceUrl` is required; only `http://` and `https://` URLs
+  are rendered as links, and anything else is shown as plain text noting the
+  source URL is missing or invalid. `sourceLabel` is the link text. `note` and
+  `amount` are optional. Donations are never printed.
+- A candidate whose `endorsements` and `donations` are both empty renders as a
+  plain row with no disclosure arrow; an empty section is never shown.
 
 ### District race names
 

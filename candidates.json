@@ -7945,7 +7945,15 @@
         "sources/tad-ballot-drawing-2026-11-03.pdf",
         "https://gisit.tarrantcounty.com/TCVL/"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08"
+        }
+      ],
       "donations": []
     },
     {
@@ -8065,7 +8073,15 @@
         "sources/tad-ballot-drawing-2026-11-03.pdf",
         "https://gisit.tarrantcounty.com/TCVL/"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08"
+        }
+      ],
       "donations": []
     },
     {
@@ -8161,7 +8177,15 @@
         "sources/tad-ballot-drawing-2026-11-03.pdf",
         "https://gisit.tarrantcounty.com/TCVL/"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08"
+        }
+      ],
       "donations": []
     },
     {
@@ -8184,7 +8208,16 @@
       "sources": [
         "https://www.kellerisd.net/board-of-trustees/elections"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08",
+          "note": "Listed as \"Parish\" on the source page"
+        }
+      ],
       "donations": []
     },
     {
@@ -8230,7 +8263,15 @@
       "sources": [
         "https://www.kellerisd.net/board-of-trustees/elections"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08"
+        }
+      ],
       "donations": []
     },
     {
@@ -8322,7 +8363,15 @@
       "sources": [
         "https://www.kellerisd.net/board-of-trustees/elections"
       ],
-      "endorsements": [],
+      "endorsements": [
+        {
+          "organization": "True Texas Project",
+          "type": "recommendation",
+          "url": "https://truetexasproject.com/elections/",
+          "source": "sources/true-texas-project-elections-2026-10-08.pdf",
+          "retrieved": "2026-10-08"
+        }
+      ],
       "donations": []
     }
   ]

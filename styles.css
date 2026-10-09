@@ -1801,6 +1801,43 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--accent);
   font-weight: 600;
 }
 
+.detail-hint {
+  margin: -4px 0 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* Endorsement vs. recommendation: same gray, same size, told apart by the
+   word and by a solid vs. dashed outline. No party color, no accent, no
+   check mark — nothing that reads as this site's own approval. */
+.endorsement-type {
+  display: inline-block;
+  padding: 0 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+.endorsement-type-recommendation { border-style: dashed; }
+
+.endorsement-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-top: 4px;
+}
+
+.endorsement-links .source-link { margin-top: 0; }
+
+/* Paper only; see the print block. */
+.print-endorsements { display: none; }
+
 .amount {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
@@ -2195,7 +2232,8 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--accent);
    Paper gets one job: the races currently on screen, in the order they are
    currently in, with each race's candidates, party, and unopposed marker.
    Everything that exists to help someone navigate the site — hero, filters,
-   signup, banner, footer, and the sourced detail behind each candidate row —
+   signup, banner, footer, and the sourced detail behind each candidate row
+   (bar a one-line list of endorsements) —
    is furniture here, so it comes off. Single column, black on white, no
    shadows and no tinted panels: it has to survive a cheap printer.
    ========================================================================== */
@@ -2414,10 +2452,19 @@ details.candidate > .candidate-row:hover .candidate-name { color: var(--accent);
 
   .candidate + .candidate { border-top: 0; }
 
-  /* Endorsements and donations stay off the sheet, and so does the disclosure
-     arrow that would have opened them. */
+  /* The expanded detail — links, dates, donations — stays off the sheet, and
+     so does the disclosure arrow that would have opened it. Endorsements come
+     back as one plain line under the name: who, and in their word what. */
   .candidate-detail { display: none !important; }
   details.candidate > .candidate-row::after { display: none !important; }
+
+  .print-endorsements {
+    display: block !important;
+    padding-left: 6pt;
+    font-size: 8.5pt;
+    font-style: italic;
+    line-height: 1.25;
+  }
 
   .candidate-row {
     display: block;

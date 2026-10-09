@@ -597,13 +597,98 @@
     return ul;
   }
 
+  // The organization's own word for what it did, kept as its word. Both are
+  // reported, never made, by this site, so the two get the same neutral tag
+  // and differ only in its outline and its text.
+  var ENDORSEMENT_TYPES = {
+    'endorsement': 'Endorsement',
+    'recommendation': 'Recommendation'
+  };
+
+  // An archived copy checked into this site under sources/. Anything else is
+  // not a path this site serves, so it gets no link rather than a broken one.
+  function safeSourcePath(path) {
+    if (typeof path !== 'string') return null;
+    var trimmed = path.trim();
+    return /^sources\/[\w.\-]+$/.test(trimmed) ? trimmed : null;
+  }
+
+  function renderLink(href, label) {
+    var a = el('a', 'source-link', label + ' ↗');
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.title = href;
+    return a;
+  }
+
+  function renderEndorsementList(items) {
+    var ul = el('ul', 'item-list');
+
+    items.forEach(function (item) {
+      var li = el('li', 'endorsement');
+
+      li.appendChild(el('span', 'item-name', item.organization || 'Unnamed organization'));
+
+      var typeKey = String(item.type || '').toLowerCase();
+      var typeLabel = ENDORSEMENT_TYPES[typeKey];
+      if (typeLabel) {
+        li.appendChild(document.createTextNode(' '));
+        li.appendChild(el('span', 'endorsement-type endorsement-type-' + typeKey, typeLabel));
+      }
+
+      if (item.note) {
+        li.appendChild(el('span', 'item-note', item.note));
+      }
+
+      // Each organization's list changes as the election nears; the date says
+      // which version of it this is.
+      var links = el('span', 'endorsement-links');
+      if (item.retrieved) {
+        links.appendChild(el('span', 'item-meta', 'Retrieved ' + formatDate(item.retrieved)));
+      }
+      var archived = safeSourcePath(item.source);
+      var live = safeUrl(item.url);
+      if (archived) links.appendChild(renderLink(archived, 'Source'));
+      if (live) links.appendChild(renderLink(live, 'Organization’s page'));
+      if (!archived && !live) {
+        links.appendChild(el('span', 'item-meta', 'No valid source in data'));
+      }
+      li.appendChild(links);
+
+      ul.appendChild(li);
+    });
+
+    return ul;
+  }
+
+  // The paper copy of the endorsement list: organization and type, nothing
+  // to click and no date. It lives in the row rather than the detail because
+  // a closed <details> does not print its contents, and is hidden on screen,
+  // where the detail already says the same thing with its sources.
+  function renderPrintEndorsements(items) {
+    if (!items || !items.length) return null;
+    var text = items.map(function (item) {
+      var org = item.organization || 'Unnamed organization';
+      var typeLabel = ENDORSEMENT_TYPES[String(item.type || '').toLowerCase()];
+      return typeLabel ? org + ' (' + typeLabel.toLowerCase() + ')' : org;
+    }).join('; ');
+    return el('span', 'print-endorsements', text);
+  }
+
   // A section with nothing in it is not rendered at all — an empty heading
   // over a "none recorded" line is noise on every one of 153 candidates.
   function renderDetail(title, items, kind) {
     if (!items || !items.length) return null;
     var wrap = el('div', 'detail');
     wrap.appendChild(el('p', 'detail-label', title));
-    wrap.appendChild(renderItemList(items, kind));
+    if (kind === 'endorsement') {
+      wrap.appendChild(el('p', 'detail-hint',
+        'As published by each organization. This guide makes no endorsements or recommendations of its own.'));
+      wrap.appendChild(renderEndorsementList(items));
+    } else {
+      wrap.appendChild(renderItemList(items, kind));
+    }
     return wrap;
   }
 
@@ -642,7 +727,7 @@
       (selecting ? (hit ? ' candidate-match' : ' candidate-dim') : '');
 
     var sections = [
-      renderDetail('Endorsements', c.endorsements, 'endorsement'),
+      renderDetail('Endorsements & recommendations', c.endorsements, 'endorsement'),
       renderDetail('Donations', c.donations, 'donation')
     ].filter(Boolean);
 
@@ -654,6 +739,8 @@
       ? renderNonpartisanLabel()
       : renderPartyChip(c.party));
     if (c.unopposed) row.appendChild(el('span', 'marker-unopposed', 'Unopposed'));
+    var printed = renderPrintEndorsements(c.endorsements);
+    if (printed) row.appendChild(printed);
     box.appendChild(row);
 
     if (sections.length) {
