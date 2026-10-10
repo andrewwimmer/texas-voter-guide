@@ -10,3 +10,4 @@ __pycache__/
 
 # Files Claude (Cowork) saves for download, not part of the site
 Claude outputs/
+.venv/
